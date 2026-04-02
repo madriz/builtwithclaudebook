@@ -152,6 +152,14 @@ img {
     color: var(--text-primary);
 }
 
+.site-header nav a.btn {
+    color: #fff;
+}
+
+.site-header nav a.btn:hover {
+    color: #fff;
+}
+
 /* ===== Hero ===== */
 .hero {
     padding: 80px 0 100px;
@@ -181,20 +189,21 @@ img {
     color: var(--accent);
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-}
-
 .subtitle-secondary {
     font-size: 0.95rem;
     color: #88A0AA;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
     margin-bottom: 32px;
 }
 
 .stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 32px;
 }
@@ -678,11 +687,18 @@ img {
     }
 
     .subtitle-secondary {
-        font-size: 0.85rem;
+        font-size: 0.82rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
     }
 
     .stats {
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        justify-items: center;
     }
 
     .hero-actions {
