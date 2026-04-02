@@ -403,21 +403,20 @@ img {
     gap: 48px;
 }
 
-.author-photo-wrap {
-    flex-shrink: 0;
+.author-photo {
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    border: 3px solid #00ACED;
     overflow: hidden;
-    border: 3px solid var(--accent);
-    box-shadow: 0 0 24px rgba(0, 172, 237, 0.15);
+    flex-shrink: 0;
 }
 
-.author-photo {
+.author-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
     display: block;
 }
 
@@ -740,7 +739,7 @@ img {
         text-align: center;
     }
 
-    .author-photo-wrap {
+    .author-photo {
         width: 120px;
         height: 120px;
     }
