@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Prompt Scorer — Built with Claude in 28 Days</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        (function(){
+            var c = document.cookie.split(';');
+            var ok = false;
+            for (var i = 0; i < c.length; i++) {
+                if (c[i].trim().indexOf('bwc_unlocked=1') === 0) { ok = true; break; }
+            }
+            if (!ok) window.location.href = '../exercises.html';
+        })();
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../" class="logo">Built with Claude</a>
+            <nav>
+                <a href="../exercises.html">Exercises</a>
+                <a href="../downloads.html">Downloads</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ex-page">
+            <div class="container">
+                <a href="../exercises.html" class="back-link">&larr; Back to exercises</a>
+
+                <div class="ex-header">
+                    <span class="ex-badge">Chapter 1 Exercise</span>
+                    <h1>Prompt Scorer</h1>
+                    <p class="ex-intro">Paste a prompt you've written (or write one now) and see how it scores across five key elements of effective prompting.</p>
+                </div>
+
+                <div class="scorer-layout">
+                    <div class="scorer-input-area">
+                        <label for="prompt-input">Your prompt</label>
+                        <textarea id="prompt-input" placeholder="Paste or type your prompt here...&#10;&#10;Example: &quot;You are an experienced front-end developer. I'm building a personal portfolio site using HTML and CSS. Create a responsive navigation bar with a hamburger menu for mobile. Use flexbox for layout. Output the HTML and CSS separately.&quot;" rows="12"></textarea>
+                        <button id="score-btn" class="btn btn-primary">Score My Prompt</button>
+                    </div>
+
+                    <div id="scorecard" class="scorecard" style="display: none;">
+                        <div class="score-total">
+                            <span class="score-number" id="score-number">0</span>
+                            <span class="score-label">/ 5</span>
+                        </div>
+
+                        <div class="score-items" id="score-items"></div>
+
+                        <div class="score-footer">
+                            <p>Now rewrite your prompt with the missing elements and try it in Claude.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Rodrigo Madriz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        var criteria = [
+            {
+                name: 'Context',
+                keywords: [
+                    'background', 'situation', 'project', 'business', 'problem',
+                    'working on', 'building', 'i have', 'i\'m', 'my app',
+                    'my site', 'my project', 'codebase', 'stack', 'using',
+                    'currently', 'existing', 'our', 'we are', 'we\'re',
+                    'environment', 'framework', 'platform', 'application'
+                ],
+                pass: 'Your prompt provides context about the situation or project.',
+                fail: 'Add context: describe your project, tech stack, or the problem you\'re solving. Example: "I\'m building a recipe app using React and Firebase..."'
+            },
+            {
+                name: 'Specificity',
+                keywords: [
+                    'specific', 'exactly', 'must', 'should', 'require',
+                    'pixel', 'px', 'rem', 'color', 'width', 'height',
+                    'maximum', 'minimum', 'at least', 'no more than',
+                    'version', 'v2', 'three', 'four', 'five',
+                    'button', 'header', 'footer', 'sidebar', 'modal',
+                    'function', 'method', 'class', 'component', 'endpoint',
+                    'named', 'called', 'returns', 'accepts', 'takes'
+                ],
+                pass: 'Your prompt includes specific details, names, or constraints.',
+                fail: 'Be more specific: mention exact names, dimensions, counts, or constraints. Instead of "make a form," say "create a 4-field contact form with name, email, subject, and message."'
+            },
+            {
+                name: 'Persona / Role',
+                keywords: [
+                    'you are', 'you\'re', 'act as', 'role of', 'as a',
+                    'expert', 'senior', 'experienced', 'specialist',
+                    'developer', 'designer', 'architect', 'engineer',
+                    'consultant', 'reviewer', 'editor', 'teacher',
+                    'pretend', 'imagine you', 'behave as', 'perspective of'
+                ],
+                pass: 'Your prompt assigns a role or persona to Claude.',
+                fail: 'Assign a role: tell Claude who to be. Example: "You are an experienced Python developer who specializes in data pipelines..."'
+            },
+            {
+                name: 'Output Format',
+                keywords: [
+                    'format', 'list', 'table', 'bullet', 'numbered',
+                    'paragraph', 'section', 'heading', 'markdown',
+                    'json', 'csv', 'html', 'css', 'code block',
+                    'step by step', 'step-by-step', 'outline', 'summary',
+                    'separately', 'structure', 'organize', 'length',
+                    'words', 'sentences', 'concise', 'brief', 'detailed',
+                    'example', 'template', 'show me', 'output'
+                ],
+                pass: 'Your prompt specifies how the output should be structured.',
+                fail: 'Specify the format: tell Claude how to structure its response. Example: "Present this as a numbered list" or "Output the HTML and CSS in separate code blocks."'
+            },
+            {
+                name: 'Iteration Opportunity',
+                keywords: [
+                    'first', 'start with', 'begin with', 'initial',
+                    'draft', 'version', 'iteration', 'iterate',
+                    'then', 'next', 'after that', 'follow up',
+                    'refine', 'improve', 'adjust', 'modify',
+                    'let me know', 'ask me', 'check with me',
+                    'feedback', 'review', 'before', 'we can',
+                    'options', 'alternatives', 'suggest', 'recommend'
+                ],
+                pass: 'Your prompt leaves room for follow-up iteration.',
+                fail: 'Build in iteration: instead of asking for the final answer, ask for a draft or options. Example: "Start with the basic structure — I\'ll give feedback before we add styling."'
+            }
+        ];
+
+        var input = document.getElementById('prompt-input');
+        var btn = document.getElementById('score-btn');
+        var scorecard = document.getElementById('scorecard');
+        var scoreNumber = document.getElementById('score-number');
+        var scoreItems = document.getElementById('score-items');
+
+        btn.addEventListener('click', function () {
+            var text = input.value.trim().toLowerCase();
+            if (!text) {
+                input.focus();
+                return;
+            }
+
+            var total = 0;
+            var html = '';
+
+            for (var i = 0; i < criteria.length; i++) {
+                var c = criteria[i];
+                var found = false;
+                for (var j = 0; j < c.keywords.length; j++) {
+                    if (text.indexOf(c.keywords[j]) !== -1) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) total++;
+
+                html += '<div class="score-item ' + (found ? 'pass' : 'fail') + '">';
+                html += '<span class="score-icon">' + (found ? '&#10003;' : '&#10007;') + '</span>';
+                html += '<div class="score-detail">';
+                html += '<strong>' + c.name + '</strong>';
+                html += '<p>' + (found ? c.pass : c.fail) + '</p>';
+                html += '</div>';
+                html += '</div>';
+            }
+
+            scoreNumber.textContent = total;
+            scoreItems.innerHTML = html;
+            scorecard.style.display = 'block';
+            scorecard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    })();
+    </script>
+</body>
+</html>

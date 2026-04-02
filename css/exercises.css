@@ -1,0 +1,547 @@
+/* ===== Exercise Page Shared ===== */
+.ex-page {
+    padding: 32px 0 80px;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.ex-header {
+    margin-bottom: 40px;
+}
+
+.ex-badge {
+    display: inline-block;
+    background: rgba(0, 172, 237, 0.15);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.ex-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.ex-intro {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 640px;
+}
+
+/* ===== Shared Form Elements ===== */
+.field-group {
+    margin-bottom: 16px;
+}
+
+.field-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.field-hint {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+.field-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.field-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.field-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* ===== Exercise 1: Prompt Scorer ===== */
+.scorer-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.scorer-input-area {
+    max-width: 700px;
+}
+
+.scorer-input-area label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.scorer-input-area textarea {
+    width: 100%;
+    padding: 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 16px;
+}
+
+.scorer-input-area textarea:focus {
+    border-color: var(--accent);
+}
+
+.scorer-input-area textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* Scorecard */
+.scorecard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    max-width: 700px;
+}
+
+.score-total {
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.score-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.score-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.score-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.score-item.pass {
+    border-left: 3px solid var(--success);
+}
+
+.score-item.fail {
+    border-left: 3px solid #EF4444;
+}
+
+.score-icon {
+    font-size: 1.1rem;
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.score-item.pass .score-icon {
+    color: var(--success);
+}
+
+.score-item.fail .score-icon {
+    color: #EF4444;
+}
+
+.score-detail strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.score-detail p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.score-footer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.score-footer p {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* ===== Exercise 2: Reconstruction ===== */
+.recon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.recon-column-title {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.recon-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+/* Compare results */
+.compare-results {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    max-width: 600px;
+}
+
+.compare-results h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.compare-summary {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.compare-summary strong {
+    color: var(--accent);
+}
+
+.compare-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.compare-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.compare-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.compare-status {
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+.compare-item.improved .compare-status {
+    color: var(--success);
+    background: rgba(0, 186, 124, 0.15);
+}
+
+.compare-item.same .compare-status {
+    color: var(--text-muted);
+    background: rgba(107, 114, 128, 0.15);
+}
+
+.compare-item.still-empty .compare-status {
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.15);
+}
+
+/* ===== Exercise 3: Knowledge File Builder ===== */
+.builder-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.builder-form .btn {
+    margin-top: 8px;
+}
+
+.builder-preview {
+    position: sticky;
+    top: 80px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-card);
+}
+
+.preview-header h3 {
+    font-size: 0.9rem;
+}
+
+.preview-badge {
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    background: rgba(107, 114, 128, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.preview-content {
+    padding: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+/* ===== Exercise 4: Walkthrough ===== */
+.walkthrough-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.step {
+    display: flex;
+    gap: 24px;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    max-width: 600px;
+}
+
+.screenshot-placeholder {
+    background: var(--bg-card);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-lg);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot-placeholder span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Tips */
+.tips-section {
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.tips-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tip-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.tip-card .tip-number {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 172, 237, 0.15);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.tip-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.tip-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.tip-card code {
+    background: var(--bg-input);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85em;
+    color: var(--accent);
+}
+
+/* ===== Exercise Card Link Style (for exercises.html) ===== */
+a.exercise-card {
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+a.exercise-card:hover {
+    border-color: var(--accent);
+    background: rgba(0, 172, 237, 0.04);
+    color: inherit;
+}
+
+a.exercise-card .exercise-link-arrow {
+    color: var(--accent);
+    margin-left: auto;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+a.exercise-card:hover .exercise-link-arrow {
+    opacity: 1;
+}
+
+/* ===== Exercise Card Download Button ===== */
+.exercise-info .btn {
+    margin-top: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .recon-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .builder-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .builder-preview {
+        position: static;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .recon-actions {
+        flex-direction: column;
+    }
+
+    .recon-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

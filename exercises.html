@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises — Built with Claude in 28 Days</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">Built with Claude</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="exercises.html">Exercises</a>
+                <a href="downloads.html">Downloads</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Auth Gate -->
+        <section id="auth-gate" class="auth-gate">
+            <div class="auth-box">
+                <h2>Reader Access</h2>
+                <p class="auth-subtitle">Enter the passcode from your book to access exercises and resources.</p>
+                <form id="auth-form">
+                    <input type="text" id="auth-input" placeholder="Enter passcode" autocomplete="off" autofocus>
+                    <button type="submit" class="btn btn-primary">Unlock</button>
+                </form>
+                <p id="auth-error" class="auth-error">Incorrect passcode. Please try again.</p>
+                <p class="auth-hint">The passcode can be found in the introduction of the book.</p>
+            </div>
+        </section>
+
+        <!-- Gated Content -->
+        <div id="gated-content" style="display: none;">
+            <section class="exercises-page">
+                <div class="container">
+                    <h1>Chapter Exercises</h1>
+                    <p class="exercises-intro">
+                        Hands-on exercises for each chapter. Work through them to reinforce what you've learned
+                        and build your skills progressively.
+                    </p>
+
+                    <!-- Tier 1: Foundation -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Tier 1</span>
+                            <h2>Foundation</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <a href="exercises/ex-01.html" class="exercise-card">
+                                <span class="exercise-number">Ch 1</span>
+                                <div class="exercise-info">
+                                    <h3>Prompt Scorer</h3>
+                                    <p>Paste a prompt and score it across five key elements of effective prompting. Get actionable suggestions for improvement.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <a href="exercises/ex-02.html" class="exercise-card">
+                                <span class="exercise-number">Ch 2</span>
+                                <div class="exercise-info">
+                                    <h3>Prompt Reconstruction Worksheet</h3>
+                                    <p>Take a prompt that didn't work and reconstruct it side by side. Compare the original and revised versions.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <a href="exercises/ex-03.html" class="exercise-card">
+                                <span class="exercise-number">Ch 3</span>
+                                <div class="exercise-info">
+                                    <h3>Project Knowledge File Builder</h3>
+                                    <p>Build a project knowledge file step by step with live preview. Export it as Markdown ready to paste into Claude.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <a href="exercises/ex-04.html" class="exercise-card">
+                                <span class="exercise-number">Ch 4</span>
+                                <div class="exercise-info">
+                                    <h3>Artifact Workflow Walkthrough</h3>
+                                    <p>Learn the five-step workflow for using Claude's Artifacts to produce clean, versioned outputs.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 5</span>
+                                <div class="exercise-info">
+                                    <h3>Writing Brief Template</h3>
+                                    <p>A structured template for briefing Claude on long-form writing projects. Define your topic, thesis, audience, voice constraints, sources, and desired outcome before starting a session.</p>
+                                    <a href="downloads/writing-brief-template.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2: Dynamic Products -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Tier 2</span>
+                            <h2>Dynamic Products</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 6</span>
+                                <div class="exercise-info">
+                                    <h3>Your First Claude Code Session</h3>
+                                    <p>A step-by-step checklist for your first session with Claude Code. Install, navigate, get a project summary, give one bounded task, verify the output, and stop. Covers what to look for at each step and what "done" looks like.</p>
+                                    <a href="downloads/claude-code-first-session.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 7</span>
+                                <div class="exercise-info">
+                                    <h3>CLAUDE.md Template</h3>
+                                    <p>A ready-to-use CLAUDE.md template for any project. Covers project overview, tech stack, key files, naming and formatting conventions, constraints, recent decisions with reasoning, and current status.</p>
+                                    <a href="downloads/claude-md-template.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 8</span>
+                                <div class="exercise-info">
+                                    <h3>Data Quality Checklist</h3>
+                                    <p>Four layers of data quality validation matching the book's framework: scraper validation rules, database constraints, daily monitoring checks, and weekly QA report items. Each layer has example entries and blank lines to fill in for your project.</p>
+                                    <a href="downloads/data-quality-checklist.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 9</span>
+                                <div class="exercise-info">
+                                    <h3>Pre-Launch SEO Checklist</h3>
+                                    <p>Everything to verify before launching a data-driven platform: sitemap, canonical URLs, hreflang, Google Search Console, page speed, structured data, 404 monitoring. Each item includes a one-line explanation of why it matters.</p>
+                                    <a href="downloads/seo-launch-checklist.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 10</span>
+                                <div class="exercise-info">
+                                    <h3>Deployment Readiness Checklist</h3>
+                                    <p>Three-phase deployment checklist: pre-deploy (tests, secrets, preview), infrastructure (services, domains, SSL), and post-deploy (verify live, check monitoring, confirm indexing). Includes a "if something goes wrong" section.</p>
+                                    <a href="downloads/deployment-checklist.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3: Full-Stack Apps -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Tier 3</span>
+                            <h2>Full-Stack Apps</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 11</span>
+                                <div class="exercise-info">
+                                    <h3>Debugging Worksheet</h3>
+                                    <p>The five-step debugging structure as a fillable worksheet. For each step &mdash; describe symptom, identify what changed, form hypothesis, investigate, verify fix &mdash; a prompt question and space for your answer.</p>
+                                    <a href="downloads/debugging-worksheet.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 12</span>
+                                <div class="exercise-info">
+                                    <h3>Production Hygiene Checklist</h3>
+                                    <p>Three checklists for three situations: pre-deployment checks, monthly infrastructure and security reviews, and post-failure response. Checkbox-style items you can run through on a regular cadence.</p>
+                                    <a href="downloads/production-hygiene-checklist.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 13</span>
+                                <div class="exercise-info">
+                                    <h3>Shared Codebase Checklist</h3>
+                                    <p>A checklist for managing two or more products on shared infrastructure. Covers CLAUDE.md configuration, cross-product testing, separate deployment verification, affiliate tracking, and decision logging.</p>
+                                    <a href="downloads/shared-codebase-checklist.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 14</span>
+                                <div class="exercise-info">
+                                    <h3>First Anthropic API Call</h3>
+                                    <p>A minimal Python script showing one Anthropic API call. About 15 lines, heavily commented. Import, client setup, message with system prompt, print response. Includes a reminder to never commit your API key.</p>
+                                    <a href="downloads/first-api-call.py" class="btn btn-sm" download>Download .py</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 15</span>
+                                <div class="exercise-info">
+                                    <h3>System Prompt Template</h3>
+                                    <p>The four-component system prompt template: Role, Task, Output specification, and Constraints. Each section has a guiding question and a concrete example. Includes a testing checklist for verifying your assembled prompt.</p>
+                                    <a href="downloads/system-prompt-template.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 16</span>
+                                <div class="exercise-info">
+                                    <h3>MCP Readiness Checklist</h3>
+                                    <p>Six questions to answer before building an MCP integration: what service, what data flows, what Claude reads, what Claude writes, where the human review point is, and what happens when the connection fails.</p>
+                                    <a href="downloads/mcp-readiness-checklist.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 4: Scale & Ship -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Tier 4</span>
+                            <h2>Scale &amp; Ship</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 17</span>
+                                <div class="exercise-info">
+                                    <h3>Workflow Mapping Template</h3>
+                                    <p>Map your current manual workflow, then redesign it with agentic automation. Two-column format: manual steps on the left, agentic redesign on the right. Includes the three-question test from the chapter for each step.</p>
+                                    <a href="downloads/workflow-mapping-template.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 18</span>
+                                <div class="exercise-info">
+                                    <h3>Embedded Claude Design Brief</h3>
+                                    <p>A design brief for embedding Claude into a product. Covers the problem Claude solves for the user, data access, allowed and prohibited actions, user interaction model, operator controls, failure modes, and cost modeling.</p>
+                                    <a href="downloads/embedded-claude-design-brief.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 19</span>
+                                <div class="exercise-info">
+                                    <h3>Portfolio Inventory</h3>
+                                    <p>A table template for inventorying your solo founder stack. Columns for project name, status, monthly infrastructure cost, weekly time investment, revenue model, and next milestone. Includes assessment questions for each project.</p>
+                                    <a href="downloads/portfolio-inventory-template.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 20</span>
+                                <div class="exercise-info">
+                                    <h3>AI Governance Framework</h3>
+                                    <p>The five-element governance framework as a fillable document: appropriate use policy, human oversight model, data handling rules, failure response plan, and review cadence. Each section has a guiding question and space for your organization's answer.</p>
+                                    <a href="downloads/governance-framework-template.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 21</span>
+                                <div class="exercise-info">
+                                    <h3>Enterprise Translation Worksheet</h3>
+                                    <p>Five patterns translated from solo to team: verification, context management, deployment, governance, and cost control. For each pattern, document what it looks like for one person, what it looks like for a team, and what changes.</p>
+                                    <a href="downloads/enterprise-translation-worksheet.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Ch 22</span>
+                                <div class="exercise-info">
+                                    <h3>AI Liability Assessment</h3>
+                                    <p>A structured assessment template covering six areas: what decisions your AI influences, who is affected, worst-case error outcomes, accountability assignment, disclosure policy, and regulatory requirements.</p>
+                                    <a href="downloads/ai-liability-assessment.md" class="btn btn-sm" download>Download .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Rodrigo Madriz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads — Built with Claude in 28 Days</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">Built with Claude</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="exercises.html">Exercises</a>
+                <a href="downloads.html">Downloads</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Auth Gate -->
+        <section id="auth-gate" class="auth-gate">
+            <div class="auth-box">
+                <h2>Reader Access</h2>
+                <p class="auth-subtitle">Enter the passcode from your book to access exercises and resources.</p>
+                <form id="auth-form">
+                    <input type="text" id="auth-input" placeholder="Enter passcode" autocomplete="off" autofocus>
+                    <button type="submit" class="btn btn-primary">Unlock</button>
+                </form>
+                <p id="auth-error" class="auth-error">Incorrect passcode. Please try again.</p>
+                <p class="auth-hint">The passcode can be found in the introduction of the book.</p>
+            </div>
+        </section>
+
+        <!-- Gated Content -->
+        <div id="gated-content" style="display: none;">
+            <section class="downloads-page">
+                <div class="container">
+                    <h1>Downloads &amp; Templates</h1>
+                    <p class="downloads-intro">
+                        Templates and worksheets referenced in the book. Download them to use as starting points
+                        for your own projects.
+                    </p>
+
+                    <div class="download-cards">
+                        <div class="download-card">
+                            <h3>Project Knowledge File Template</h3>
+                            <p>The template for creating project knowledge files that give Claude persistent context about your project across sessions. Referenced in Chapter 5.</p>
+                            <a href="downloads/project-knowledge-template.md" class="btn btn-secondary" download>Download Template</a>
+                            <p class="file-type">.md &middot; Markdown</p>
+                        </div>
+
+                        <div class="download-card">
+                            <h3>Prompt Reconstruction Worksheet</h3>
+                            <p>A structured worksheet for reverse-engineering effective prompts. Break down what worked, what didn't, and build reusable prompt patterns.</p>
+                            <a href="downloads/prompt-reconstruction-worksheet.md" class="btn btn-secondary" download>Download Worksheet</a>
+                            <p class="file-type">.md &middot; Markdown</p>
+                        </div>
+
+                        <div class="download-card">
+                            <h3>Validation Rule Worksheet</h3>
+                            <p>Use this worksheet to define validation rules for your AI-generated code. Establish quality gates before accepting Claude's output.</p>
+                            <a href="downloads/validation-rule-worksheet.md" class="btn btn-secondary" download>Download Worksheet</a>
+                            <p class="file-type">.md &middot; Markdown</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Rodrigo Madriz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

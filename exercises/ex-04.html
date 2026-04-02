@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Artifact Workflow Walkthrough — Built with Claude in 28 Days</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        (function(){
+            var c = document.cookie.split(';');
+            var ok = false;
+            for (var i = 0; i < c.length; i++) {
+                if (c[i].trim().indexOf('bwc_unlocked=1') === 0) { ok = true; break; }
+            }
+            if (!ok) window.location.href = '../exercises.html';
+        })();
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../" class="logo">Built with Claude</a>
+            <nav>
+                <a href="../exercises.html">Exercises</a>
+                <a href="../downloads.html">Downloads</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ex-page">
+            <div class="container">
+                <a href="../exercises.html" class="back-link">&larr; Back to exercises</a>
+
+                <div class="ex-header">
+                    <span class="ex-badge">Chapter 4 Exercise</span>
+                    <h1>Artifact Workflow Walkthrough</h1>
+                    <p class="ex-intro">Learn the five-step workflow for using Claude's Artifacts feature to produce clean, versioned outputs instead of burying results in long conversations.</p>
+                </div>
+
+                <div class="walkthrough-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h2>Identify a task currently buried in conversation</h2>
+                            <p>Look through your recent Claude conversations. Find a task where the useful output &mdash; code, a document, a config file &mdash; is scattered across multiple messages. That's the task you'll redo with Artifacts.</p>
+                            <div class="screenshot-placeholder">
+                                <span>Screenshot coming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h2>Start a new session with your project knowledge file loaded</h2>
+                            <p>Open a new Claude conversation. If you're using Claude Projects, add your project knowledge file to the project. If you're in a regular conversation, paste the contents of your knowledge file as the first message. This gives Claude the full context it needs.</p>
+                            <div class="screenshot-placeholder">
+                                <span>Screenshot coming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h2>Ask Claude to produce the first output as an Artifact</h2>
+                            <p>In your prompt, explicitly ask Claude to create an Artifact. Be clear about what the artifact should contain and what format it should be in. For example: "Create an Artifact with the HTML for my landing page header component."</p>
+                            <div class="screenshot-placeholder">
+                                <span>Screenshot coming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h2>Continue iterating &mdash; each revision updates the Artifact</h2>
+                            <p>As you ask for changes, Claude updates the same Artifact rather than creating new code blocks in the conversation. You can see the version history and the conversation stays clean. Each iteration builds on the last.</p>
+                            <div class="screenshot-placeholder">
+                                <span>Screenshot coming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h2>Download the Artifact when the session ends</h2>
+                            <p>When you're satisfied with the output, download the Artifact directly. No need to scroll through conversation history or copy-paste from code blocks. The final version is ready to use.</p>
+                            <div class="screenshot-placeholder">
+                                <span>Screenshot coming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h2>Tips for Using Artifacts Effectively</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-number">1</div>
+                            <h3>One artifact per concern</h3>
+                            <p>Don't ask Claude to put your HTML, CSS, and JavaScript into a single Artifact. Ask for separate Artifacts for each file. This makes it easier to iterate on one part without affecting the others.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">2</div>
+                            <h3>Name your artifacts explicitly</h3>
+                            <p>Instead of letting Claude auto-name artifacts, include the filename in your request: "Create an Artifact called <code>header.html</code> with..." This keeps your session organized when you have multiple artifacts.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">3</div>
+                            <h3>Use artifacts for anything you'll copy out</h3>
+                            <p>Artifacts aren't just for code. Use them for documentation, email drafts, project plans, or any output you plan to use outside of Claude. If you're going to copy it, it should be an Artifact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Rodrigo Madriz. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
