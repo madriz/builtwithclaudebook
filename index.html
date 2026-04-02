@@ -24,7 +24,10 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="logo">Built with Claude</a>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#author">Author</a>
@@ -42,7 +45,7 @@
                     <img src="images/cover.jpg" alt="Built with Claude in 28 Days book cover" class="cover-image">
                 </div>
                 <div class="hero-content">
-                    <h1>Built with Claude <span class="accent">in 28 Days</span></h1>
+                    <h1>Built with Claude<br class="mobile-break"> <span class="accent">in 28 Days</span></h1>
                     <p class="tagline">Ship Real Products with AI as Your Development Partner</p>
                     <p class="subtitle-secondary">Four Ventures, a Daily AI Comic Strip, and the Non-Technical Founder's Playbook</p>
 
@@ -197,5 +200,24 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+                nav.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        btn.classList.remove('open');
+                        nav.classList.remove('open');
+                    });
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
