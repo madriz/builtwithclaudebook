@@ -232,15 +232,22 @@ img {
     color: var(--text-muted);
 }
 
-/* ===== About / Tiers ===== */
-.about {
+/* ===== About the Book ===== */
+.about-book {
     padding: 80px 0;
     background: var(--bg-secondary);
 }
 
-.about h2 {
+.about-book h2 {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.about-book-text {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    line-height: 1.75;
+    max-width: 720px;
 }
 
 .section-intro {
@@ -250,26 +257,7 @@ img {
     margin-bottom: 48px;
 }
 
-.tiers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.tier {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-}
-
-.tier-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
+/* ===== Tiers (exercises page) ===== */
 .tier-badge {
     background: rgba(0, 172, 237, 0.15);
     color: var(--accent);
@@ -281,23 +269,108 @@ img {
     letter-spacing: 0.05em;
 }
 
-.tier h3 {
-    font-size: 1.15rem;
+/* ===== Projects ===== */
+.projects {
+    padding: 80px 0;
 }
 
-.tier p {
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-grid .project-card:nth-child(4),
+.project-grid .project-card:nth-child(5) {
+    /* Center the last two cards in a 3-col grid */
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+}
+
+.project-screenshot {
+    background: var(--bg-input);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.project-screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-screenshot span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.project-info {
+    padding: 20px 24px;
+}
+
+.project-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.project-info p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.project-link {
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 /* ===== Author ===== */
 .author {
     padding: 80px 0;
+    background: var(--bg-secondary);
 }
 
 .author h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+.author-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.author-photo-wrap {
+    flex-shrink: 0;
+}
+
+.author-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 24px rgba(0, 172, 237, 0.15);
 }
 
 .author-content p {
@@ -311,28 +384,21 @@ img {
     color: var(--text-primary);
 }
 
-/* ===== CTA ===== */
-.cta {
+/* ===== Book Access ===== */
+.book-access {
     padding: 80px 0;
-    background: var(--bg-secondary);
     text-align: center;
 }
 
-.cta h2 {
+.book-access h2 {
     font-size: 2rem;
     margin-bottom: 12px;
 }
 
-.cta p {
+.book-access p {
     color: var(--text-secondary);
     font-size: 1.05rem;
     margin-bottom: 32px;
-}
-
-.cta-actions {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
 }
 
 /* ===== Footer ===== */
@@ -354,6 +420,11 @@ img {
 .footer-links a {
     color: var(--text-secondary);
     font-size: 0.85rem;
+}
+
+.footer-sep {
+    color: var(--text-muted);
+    margin: 0 8px;
 }
 
 /* ===== Auth Gate ===== */
@@ -599,34 +670,24 @@ img {
         justify-content: center;
     }
 
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .hero-actions {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
         justify-content: center;
     }
 
-    .tiers {
+    .project-grid {
         grid-template-columns: 1fr;
+        max-width: 440px;
     }
 
-    .cta-actions {
+    .author-layout {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
-    .cta-actions .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
+    .author-photo {
+        width: 120px;
+        height: 120px;
     }
 
     .site-header nav {
@@ -648,6 +709,12 @@ img {
 
     .coming-soon-badge {
         margin-left: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
