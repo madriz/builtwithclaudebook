@@ -32,6 +32,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 .container {
@@ -153,11 +154,11 @@ img {
 }
 
 .site-header nav a.btn {
-    color: #fff;
+    color: #FFFFFF !important;
 }
 
 .site-header nav a.btn:hover {
-    color: #fff;
+    color: #FFFFFF !important;
 }
 
 /* ===== Hero ===== */
@@ -189,15 +190,15 @@ img {
     color: var(--accent);
 }
 
-.subtitle-secondary {
-    font-size: 0.95rem;
-    color: #88A0AA;
+.tagline {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
     margin-bottom: 10px;
 }
 
-.subtitle {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
+.subtitle-secondary {
+    font-size: 0.9rem;
+    color: #88A0AA;
     margin-bottom: 32px;
 }
 
@@ -387,9 +388,8 @@ img {
 
 .author-photo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
+    height: auto;
+    transform: scale(1.3) translateY(-10%);
     display: block;
 }
 
@@ -682,16 +682,12 @@ img {
         font-size: 2rem;
     }
 
-    .subtitle {
-        font-size: 1.05rem;
+    .tagline {
+        font-size: 1rem;
     }
 
     .subtitle-secondary {
-        font-size: 0.82rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .stats {
