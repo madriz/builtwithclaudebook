@@ -1,0 +1,10 @@
+# robots.txt for builtwithclaudebook.com
+User-agent: *
+Allow: /
+Disallow: /exercises/
+Disallow: /downloads/
+Disallow: /exercises.html
+Disallow: /downloads.html
+Disallow: /amazon-redirect.html
+
+Sitemap: https://builtwithclaudebook.com/sitemap.xml

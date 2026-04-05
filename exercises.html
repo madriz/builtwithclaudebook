@@ -14,6 +14,21 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <title>Exercises — Built with Claude in 28 Days</title>
+    <meta name="description" content="Chapter-by-chapter exercises for Built with Claude in 28 Days. Prompt scorer, reconstruction worksheet, project knowledge builder, artifact workflow, and more.">
+    <meta name="keywords" content="Built with Claude in 28 Days exercises, Claude AI exercises, prompt scorer, prompt engineering, project knowledge file, Claude artifacts, AI book exercises">
+    <meta name="author" content="Rodrigo Madriz">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://builtwithclaudebook.com/exercises.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Exercises — Built with Claude in 28 Days">
+    <meta property="og:description" content="Chapter-by-chapter exercises for Built with Claude in 28 Days. Prompt scorer, reconstruction worksheet, project knowledge builder, and more.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/exercises.html">
+    <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <meta property="og:site_name" content="Built with Claude in 28 Days">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Exercises — Built with Claude in 28 Days">
+    <meta name="twitter:description" content="Chapter-by-chapter exercises for Built with Claude in 28 Days. Prompt scorer, reconstruction worksheet, project knowledge builder, and more.">
+    <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/exercises.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +36,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="container">
             <a href="/" class="logo">Built with Claude</a>
@@ -32,18 +48,19 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <!-- Auth Gate -->
         <section id="auth-gate" class="auth-gate">
             <div class="auth-box">
                 <h2>Reader Access</h2>
                 <p class="auth-subtitle">Enter the passcode from your book to access exercises and resources.</p>
                 <form id="auth-form">
-                    <input type="text" id="auth-input" placeholder="Enter passcode" autocomplete="off" autofocus>
+                    <label for="auth-input" class="visually-hidden">Passcode</label>
+                    <input type="text" id="auth-input" name="passcode" placeholder="Enter passcode" autocomplete="off" autofocus aria-describedby="auth-error auth-hint">
                     <button type="submit" class="btn btn-primary">Unlock</button>
                 </form>
-                <p id="auth-error" class="auth-error">Incorrect passcode. Please try again.</p>
-                <p class="auth-hint">The passcode can be found in the introduction of the book.</p>
+                <p id="auth-error" class="auth-error" role="alert">Incorrect passcode. Please try again.</p>
+                <p id="auth-hint" class="auth-hint">The passcode can be found in the introduction of the book.</p>
             </div>
         </section>
 
