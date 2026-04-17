@@ -19,6 +19,8 @@
     <meta name="author" content="Rodrigo Madriz">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://builtwithclaudebook.com/downloads.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/downloads.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/downloads.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Downloads — Built with Claude in 28 Days">
     <meta property="og:description" content="Downloadable templates and worksheets from Built with Claude in 28 Days: project knowledge file, prompt reconstruction, validation rules, and more.">
@@ -39,10 +41,18 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="logo">Built with Claude</a>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
                 <a href="/">Home</a>
                 <a href="exercises.html">Exercises</a>
                 <a href="downloads.html">Downloads</a>
+                <span class="lang-toggle" role="group" aria-label="Language">
+                    <a href="/downloads.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/downloads.html" data-lang="es">ES</a>
+                </span>
             </nav>
         </div>
     </header>
@@ -107,5 +117,18 @@
     </footer>
 
     <script src="js/auth.js"></script>
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="js/lang.js"></script>
 </body>
 </html>

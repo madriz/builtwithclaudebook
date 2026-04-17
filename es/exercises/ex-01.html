@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZVHCD3NRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SZVHCD3NRF');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <title>Ejercicio 1: Evaluador de Prompts — 28 Días con Claude</title>
+    <meta name="description" content="Ejercicio del Capítulo 1 de 28 Días con Claude. Pega un prompt y evalúalo en los cinco elementos clave de un prompt eficaz con retroalimentación accionable.">
+    <meta name="keywords" content="evaluador de prompts, ingeniería de prompts, prompts de Claude, evaluación de prompts, ejercicio 28 Días con Claude">
+    <meta name="author" content="Rodrigo Madriz">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://builtwithclaudebook.com/es/exercises/ex-01.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-01.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-01.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ejercicio 1: Evaluador de Prompts — 28 Días con Claude">
+    <meta property="og:description" content="Pega un prompt y evalúalo en los cinco elementos clave de un prompt eficaz. Ejercicio del Capítulo 1 de 28 Días con Claude.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/es/exercises/ex-01.html">
+    <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <meta property="og:site_name" content="28 Días con Claude">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ejercicio 1: Evaluador de Prompts — 28 Días con Claude">
+    <meta name="twitter:description" content="Pega un prompt y evalúalo en los cinco elementos clave de un prompt eficaz.">
+    <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        (function(){
+            var c = document.cookie.split(';');
+            var ok = false;
+            for (var i = 0; i < c.length; i++) {
+                if (c[i].trim().indexOf('bwc_unlocked=1') === 0) { ok = true; break; }
+            }
+            if (!ok) window.location.href = '/es/exercises.html';
+        })();
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="/es/" class="logo">28 Días con Claude</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="/es/exercises.html">Ejercicios</a>
+                <a href="/es/downloads.html">Descargas</a>
+                <span class="lang-toggle" role="group" aria-label="Idioma">
+                    <a href="/exercises/ex-01.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/exercises/ex-01.html" data-lang="es">ES</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="ex-page">
+            <div class="container">
+                <a href="/es/exercises.html" class="back-link">&larr; Volver a ejercicios</a>
+
+                <div class="ex-header">
+                    <span class="ex-badge">Ejercicio del Capítulo 1</span>
+                    <h1>Evaluador de Prompts</h1>
+                    <p class="ex-intro">Pega un prompt que hayas escrito (o escribe uno ahora) y observa su puntuación en los cinco elementos clave de un prompt eficaz.</p>
+                </div>
+
+                <div class="scorer-layout">
+                    <div class="scorer-input-area">
+                        <label for="prompt-input">Tu prompt</label>
+                        <textarea id="prompt-input" placeholder="Pega o escribe tu prompt aquí...&#10;&#10;Ejemplo: &quot;Eres un desarrollador front-end con experiencia. Estoy construyendo un sitio portafolio personal usando HTML y CSS. Crea una barra de navegación responsiva con menú hamburguesa para móvil. Usa flexbox para el layout. Entrega el HTML y el CSS por separado.&quot;" rows="12"></textarea>
+                        <button id="score-btn" class="btn btn-primary">Evaluar mi prompt</button>
+                    </div>
+
+                    <div id="scorecard" class="scorecard" style="display: none;">
+                        <div class="score-total">
+                            <span class="score-number" id="score-number">0</span>
+                            <span class="score-label">/ 5</span>
+                        </div>
+
+                        <div class="score-items" id="score-items"></div>
+
+                        <div class="score-footer">
+                            <p>Ahora reescribe tu prompt con los elementos faltantes y pruébalo en Claude.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Rodrigo Madriz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        var criteria = [
+            {
+                name: 'Contexto',
+                keywords: [
+                    'antecedentes', 'situación', 'proyecto', 'negocio', 'problema',
+                    'trabajando en', 'construyendo', 'tengo', 'estoy', 'mi app',
+                    'mi sitio', 'mi proyecto', 'codebase', 'código', 'stack', 'usando',
+                    'actualmente', 'existente', 'nuestro', 'nuestra', 'somos',
+                    'entorno', 'framework', 'plataforma', 'aplicación',
+                    // also match common english keywords since users may paste mixed text
+                    'background', 'project', 'building', 'working on'
+                ],
+                pass: 'Tu prompt ofrece contexto sobre la situación o el proyecto.',
+                fail: 'Añade contexto: describe tu proyecto, tu stack o el problema que resuelves. Ejemplo: "Estoy construyendo una app de recetas usando React y Firebase..."'
+            },
+            {
+                name: 'Especificidad',
+                keywords: [
+                    'específico', 'específica', 'exactamente', 'debe', 'debería', 'requiere',
+                    'pixel', 'px', 'rem', 'color', 'ancho', 'alto',
+                    'máximo', 'mínimo', 'al menos', 'no más de',
+                    'versión', 'v2', 'tres', 'cuatro', 'cinco',
+                    'botón', 'encabezado', 'pie', 'sidebar', 'modal',
+                    'función', 'método', 'clase', 'componente', 'endpoint',
+                    'llamado', 'llamada', 'retorna', 'acepta', 'recibe',
+                    'specific', 'exactly', 'must', 'should'
+                ],
+                pass: 'Tu prompt incluye detalles, nombres o restricciones específicas.',
+                fail: 'Sé más específico: menciona nombres exactos, dimensiones, cantidades o restricciones. En lugar de "haz un formulario", di "crea un formulario de contacto con 4 campos: nombre, email, asunto y mensaje".'
+            },
+            {
+                name: 'Rol / Persona',
+                keywords: [
+                    'eres', 'actúa como', 'rol de', 'como un', 'como una',
+                    'experto', 'experta', 'senior', 'con experiencia', 'especialista',
+                    'desarrollador', 'desarrolladora', 'diseñador', 'diseñadora', 'arquitecto', 'ingeniero',
+                    'consultor', 'revisor', 'editor', 'profesor',
+                    'imagina que eres', 'compórtate como', 'perspectiva de',
+                    'you are', 'act as', 'as a', 'expert'
+                ],
+                pass: 'Tu prompt asigna un rol o persona a Claude.',
+                fail: 'Asigna un rol: dile a Claude quién debe ser. Ejemplo: "Eres un desarrollador Python con experiencia en pipelines de datos..."'
+            },
+            {
+                name: 'Formato de salida',
+                keywords: [
+                    'formato', 'lista', 'tabla', 'viñetas', 'numerada',
+                    'párrafo', 'sección', 'encabezado', 'markdown',
+                    'json', 'csv', 'html', 'css', 'bloque de código',
+                    'paso a paso', 'esquema', 'resumen',
+                    'por separado', 'estructura', 'organiza', 'longitud',
+                    'palabras', 'oraciones', 'conciso', 'breve', 'detallado',
+                    'ejemplo', 'plantilla', 'muéstrame', 'salida',
+                    'format', 'list', 'table', 'markdown', 'step by step'
+                ],
+                pass: 'Tu prompt especifica cómo debe estructurarse la salida.',
+                fail: 'Especifica el formato: dile a Claude cómo estructurar su respuesta. Ejemplo: "Preséntalo como lista numerada" o "Entrega el HTML y el CSS en bloques de código separados".'
+            },
+            {
+                name: 'Oportunidad de iteración',
+                keywords: [
+                    'primero', 'comienza con', 'empieza con', 'inicial',
+                    'borrador', 'versión', 'iteración', 'iterar',
+                    'luego', 'después', 'a continuación', 'seguimiento',
+                    'refina', 'mejora', 'ajusta', 'modifica',
+                    'avísame', 'pregúntame', 'consulta conmigo',
+                    'retroalimentación', 'feedback', 'revisión', 'antes',
+                    'opciones', 'alternativas', 'sugiere', 'recomienda',
+                    'first', 'draft', 'iterate', 'feedback'
+                ],
+                pass: 'Tu prompt deja espacio para iterar con seguimiento.',
+                fail: 'Incluye iteración: en lugar de pedir la respuesta final, pide un borrador u opciones. Ejemplo: "Comienza con la estructura básica — doy retroalimentación antes de agregar estilos".'
+            }
+        ];
+
+        var input = document.getElementById('prompt-input');
+        var btn = document.getElementById('score-btn');
+        var scorecard = document.getElementById('scorecard');
+        var scoreNumber = document.getElementById('score-number');
+        var scoreItems = document.getElementById('score-items');
+
+        btn.addEventListener('click', function () {
+            var text = input.value.trim().toLowerCase();
+            if (!text) {
+                input.focus();
+                return;
+            }
+
+            var total = 0;
+            var html = '';
+
+            for (var i = 0; i < criteria.length; i++) {
+                var c = criteria[i];
+                var found = false;
+                for (var j = 0; j < c.keywords.length; j++) {
+                    if (text.indexOf(c.keywords[j]) !== -1) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) total++;
+
+                html += '<div class="score-item ' + (found ? 'pass' : 'fail') + '">';
+                html += '<span class="score-icon">' + (found ? '&#10003;' : '&#10007;') + '</span>';
+                html += '<div class="score-detail">';
+                html += '<strong>' + c.name + '</strong>';
+                html += '<p>' + (found ? c.pass : c.fail) + '</p>';
+                html += '</div>';
+                html += '</div>';
+            }
+
+            scoreNumber.textContent = total;
+            scoreItems.innerHTML = html;
+            scorecard.style.display = 'block';
+            scorecard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    })();
+    </script>
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="/js/lang.js"></script>
+</body>
+</html>

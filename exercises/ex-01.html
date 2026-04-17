@@ -19,6 +19,8 @@
     <meta name="author" content="Rodrigo Madriz">
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://builtwithclaudebook.com/exercises/ex-01.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-01.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-01.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Exercise 1: Prompt Scorer — Built with Claude in 28 Days">
     <meta property="og:description" content="Paste a prompt and score it across five key elements of effective prompting. A Chapter 1 exercise from Built with Claude in 28 Days.">
@@ -50,9 +52,17 @@
     <header class="site-header">
         <div class="container">
             <a href="../" class="logo">Built with Claude</a>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
                 <a href="../exercises.html">Exercises</a>
                 <a href="../downloads.html">Downloads</a>
+                <span class="lang-toggle" role="group" aria-label="Language">
+                    <a href="/exercises/ex-01.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/exercises/ex-01.html" data-lang="es">ES</a>
+                </span>
             </nav>
         </div>
     </header>
@@ -212,5 +222,18 @@
         });
     })();
     </script>
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="../js/lang.js"></script>
 </body>
 </html>

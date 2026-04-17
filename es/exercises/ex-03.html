@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZVHCD3NRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SZVHCD3NRF');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <title>Ejercicio 3: Constructor de archivo de conocimiento — 28 Días con Claude</title>
+    <meta name="description" content="Ejercicio del Capítulo 3 de 28 Días con Claude. Construye un archivo de conocimiento de proyecto paso a paso con vista previa en vivo y expórtalo como Markdown para Claude.">
+    <meta name="keywords" content="archivo de conocimiento, Claude projects, contexto de Claude, memoria de Claude, ejercicio 28 Días con Claude, plantilla de contexto">
+    <meta name="author" content="Rodrigo Madriz">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://builtwithclaudebook.com/es/exercises/ex-03.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-03.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-03.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ejercicio 3: Constructor de archivo de conocimiento — 28 Días con Claude">
+    <meta property="og:description" content="Construye un archivo de conocimiento de proyecto paso a paso con vista previa en vivo. Exporta como Markdown listo para pegar en Claude.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/es/exercises/ex-03.html">
+    <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <meta property="og:site_name" content="28 Días con Claude">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ejercicio 3: Constructor de archivo de conocimiento — 28 Días con Claude">
+    <meta name="twitter:description" content="Construye un archivo de conocimiento paso a paso. Exporta como Markdown listo para pegar en Claude.">
+    <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        (function(){
+            var c = document.cookie.split(';');
+            var ok = false;
+            for (var i = 0; i < c.length; i++) {
+                if (c[i].trim().indexOf('bwc_unlocked=1') === 0) { ok = true; break; }
+            }
+            if (!ok) window.location.href = '/es/exercises.html';
+        })();
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="/es/" class="logo">28 Días con Claude</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="/es/exercises.html">Ejercicios</a>
+                <a href="/es/downloads.html">Descargas</a>
+                <span class="lang-toggle" role="group" aria-label="Idioma">
+                    <a href="/exercises/ex-03.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/exercises/ex-03.html" data-lang="es">ES</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="ex-page">
+            <div class="container">
+                <a href="/es/exercises.html" class="back-link">&larr; Volver a ejercicios</a>
+
+                <div class="ex-header">
+                    <span class="ex-badge">Ejercicio del Capítulo 3</span>
+                    <h1>Constructor de archivo de conocimiento</h1>
+                    <p class="ex-intro">Rellena las secciones para construir un archivo de conocimiento que puedas pegar directamente en un proyecto de Claude. La vista previa se actualiza mientras escribes.</p>
+                </div>
+
+                <div class="builder-layout">
+                    <div class="builder-form">
+                        <div class="field-group">
+                            <label for="pk-identity">Identidad del proyecto</label>
+                            <p class="field-hint">2-3 oraciones: ¿qué es este proyecto y para quién es?</p>
+                            <textarea id="pk-identity" rows="3" placeholder="Ejemplo: TaskFlow es una app de gestión de tareas personal para freelancers. Ayuda a usuarios a hacer seguimiento de proyectos, plazos y horas facturables en un solo lugar."></textarea>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="pk-state">Estado actual</label>
+                            <p class="field-hint">¿Qué existe hoy? ¿Qué está construido, qué está en vivo, qué está por hacer?</p>
+                            <textarea id="pk-state" rows="3" placeholder="Ejemplo: La landing page está en vivo. La autenticación está construida pero sin desplegar. El dashboard está en progreso."></textarea>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="pk-decisions">Decisiones clave tomadas</label>
+                            <p class="field-hint">¿Qué se ha decidido y por qué? Incluye el razonamiento.</p>
+                            <textarea id="pk-decisions" rows="4" placeholder="Ejemplo: Usamos Supabase para auth y base de datos (por su tier gratuito generoso y auth integrado). Tailwind CSS para estilos (iteración rápida, sin necesidad de design system propio)."></textarea>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="pk-constraints">Restricciones activas</label>
+                            <p class="field-hint">Presupuesto, cronograma, técnicas o regulatorias.</p>
+                            <textarea id="pk-constraints" rows="3" placeholder="Ejemplo: $0 de presupuesto de hosting (solo tiers gratuitos). Lanzar MVP antes de fin de mes. No se almacenan datos sensibles de usuarios."></textarea>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="pk-status">Estado de la última sesión</label>
+                            <p class="field-hint">¿Qué se logró en la sesión de trabajo más reciente?</p>
+                            <textarea id="pk-status" rows="3" placeholder="Ejemplo: Completé el flujo de registro. Arreglé un bug en la validación de email. Empecé el layout del dashboard."></textarea>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="pk-next">Próximos pasos</label>
+                            <p class="field-hint">¿Qué debería abordar la próxima sesión?</p>
+                            <textarea id="pk-next" rows="3" placeholder="Ejemplo: Terminar el layout del dashboard. Agregar el formulario de creación de tareas. Conectar la lista de tareas con Supabase."></textarea>
+                        </div>
+
+                        <button id="export-btn" class="btn btn-primary">Exportar como .md</button>
+                    </div>
+
+                    <div class="builder-preview">
+                        <div class="preview-header">
+                            <h3>Vista previa en vivo</h3>
+                            <span class="preview-badge">Markdown</span>
+                        </div>
+                        <pre id="preview-output" class="preview-content"># Archivo de conocimiento del proyecto
+
+Rellena el formulario para ver aquí tu archivo de conocimiento...</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Rodrigo Madriz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        var sections = [
+            { id: 'pk-identity', heading: 'Identidad del proyecto' },
+            { id: 'pk-state', heading: 'Estado actual' },
+            { id: 'pk-decisions', heading: 'Decisiones clave tomadas' },
+            { id: 'pk-constraints', heading: 'Restricciones activas' },
+            { id: 'pk-status', heading: 'Estado de la última sesión' },
+            { id: 'pk-next', heading: 'Próximos pasos' }
+        ];
+
+        var preview = document.getElementById('preview-output');
+
+        function generateMarkdown() {
+            var md = '# Archivo de conocimiento del proyecto\n\n';
+            for (var i = 0; i < sections.length; i++) {
+                var val = document.getElementById(sections[i].id).value.trim();
+                md += '## ' + sections[i].heading + '\n\n';
+                md += (val || '_Aún sin rellenar_') + '\n\n';
+            }
+            return md;
+        }
+
+        function updatePreview() {
+            preview.textContent = generateMarkdown();
+        }
+
+        for (var i = 0; i < sections.length; i++) {
+            document.getElementById(sections[i].id).addEventListener('input', updatePreview);
+        }
+
+        document.getElementById('export-btn').addEventListener('click', function () {
+            var md = generateMarkdown();
+            var date = new Date();
+            var dateStr = date.getFullYear() + '-' +
+                String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                String(date.getDate()).padStart(2, '0');
+            var filename = 'conocimiento-de-proyecto-' + dateStr + '.md';
+
+            var blob = new Blob([md], { type: 'text/markdown' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        updatePreview();
+    })();
+    </script>
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="/js/lang.js"></script>
+</body>
+</html>

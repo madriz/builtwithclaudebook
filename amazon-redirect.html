@@ -42,7 +42,20 @@
     <div class="msg" id="msg">Redirecting to Amazon...</div>
     <script>
     (function () {
-        var ASIN = 'B0GVPXGS5Q';
+        var ASIN_EN = 'B0GVPXGS5Q';
+        var ASIN_ES = 'B0GX2WTWVD';
+
+        function getCookie(name) {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var c = cookies[i].trim();
+                if (c.indexOf(name + '=') === 0) return c.substring(name.length + 1);
+            }
+            return null;
+        }
+
+        var lang = getCookie('bwc_lang') === 'es' ? 'es' : 'en';
+        var ASIN = lang === 'es' ? ASIN_ES : ASIN_EN;
 
         var tz;
         try {
@@ -87,6 +100,11 @@
         }
 
         if (isCanada) {
+            domain = 'www.amazon.ca';
+            suffix = '?tag=homegadge0956-20';
+        } else if (lang === 'es') {
+            // Spanish edition is currently only on amazon.ca — always land on .ca
+            // so Spanish readers outside Canada still find the edition.
             domain = 'www.amazon.ca';
             suffix = '?tag=homegadge0956-20';
         } else {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +13,27 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <title>Exercise 2: Prompt Reconstruction — Built with Claude in 28 Days</title>
-    <meta name="description" content="Chapter 2 exercise from Built with Claude in 28 Days. Take a prompt that did not work and reconstruct it side by side across five key elements.">
-    <meta name="keywords" content="prompt reconstruction, prompt engineering, prompt rewriting, Claude prompts, Built with Claude exercise, prompting skills">
+    <title>Ejercicio 2: Reconstrucción de Prompts — 28 Días con Claude</title>
+    <meta name="description" content="Ejercicio del Capítulo 2 de 28 Días con Claude. Toma un prompt que no funcionó y reconstrúyelo lado a lado en los cinco elementos clave.">
+    <meta name="keywords" content="reconstrucción de prompts, ingeniería de prompts, reescritura de prompts, prompts de Claude, ejercicio 28 Días con Claude">
     <meta name="author" content="Rodrigo Madriz">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://builtwithclaudebook.com/exercises/ex-02.html">
+    <link rel="canonical" href="https://builtwithclaudebook.com/es/exercises/ex-02.html">
     <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-02.html">
     <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-02.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Exercise 2: Prompt Reconstruction — Built with Claude in 28 Days">
-    <meta property="og:description" content="Take a prompt that did not work and reconstruct it side by side. A Chapter 2 exercise from Built with Claude in 28 Days.">
-    <meta property="og:url" content="https://builtwithclaudebook.com/exercises/ex-02.html">
+    <meta property="og:title" content="Ejercicio 2: Reconstrucción de Prompts — 28 Días con Claude">
+    <meta property="og:description" content="Toma un prompt que no funcionó y reconstrúyelo lado a lado. Ejercicio del Capítulo 2 de 28 Días con Claude.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/es/exercises/ex-02.html">
     <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
-    <meta property="og:site_name" content="Built with Claude in 28 Days">
+    <meta property="og:site_name" content="28 Días con Claude">
+    <meta property="og:locale" content="es_ES">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Exercise 2: Prompt Reconstruction — Built with Claude in 28 Days">
-    <meta name="twitter:description" content="Take a prompt that did not work and reconstruct it side by side. A Chapter 2 exercise from Built with Claude in 28 Days.">
+    <meta name="twitter:title" content="Ejercicio 2: Reconstrucción de Prompts — 28 Días con Claude">
+    <meta name="twitter:description" content="Toma un prompt que no funcionó y reconstrúyelo lado a lado.">
     <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/exercises.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/exercises.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -43,22 +44,22 @@
             for (var i = 0; i < c.length; i++) {
                 if (c[i].trim().indexOf('bwc_unlocked=1') === 0) { ok = true; break; }
             }
-            if (!ok) window.location.href = '../exercises.html';
+            if (!ok) window.location.href = '/es/exercises.html';
         })();
     </script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
     <header class="site-header">
         <div class="container">
-            <a href="../" class="logo">Built with Claude</a>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
+            <a href="/es/" class="logo">28 Días con Claude</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
                 <span></span><span></span><span></span>
             </button>
             <nav id="nav-menu">
-                <a href="../exercises.html">Exercises</a>
-                <a href="../downloads.html">Downloads</a>
-                <span class="lang-toggle" role="group" aria-label="Language">
+                <a href="/es/exercises.html">Ejercicios</a>
+                <a href="/es/downloads.html">Descargas</a>
+                <span class="lang-toggle" role="group" aria-label="Idioma">
                     <a href="/exercises/ex-02.html" data-lang="en">EN</a>
                     <span class="lang-sep">/</span>
                     <a href="/es/exercises/ex-02.html" data-lang="es">ES</a>
@@ -70,71 +71,71 @@
     <main id="main">
         <section class="ex-page">
             <div class="container">
-                <a href="../exercises.html" class="back-link">&larr; Back to exercises</a>
+                <a href="/es/exercises.html" class="back-link">&larr; Volver a ejercicios</a>
 
                 <div class="ex-header">
-                    <span class="ex-badge">Chapter 2 Exercise</span>
-                    <h1>Prompt Reconstruction Worksheet</h1>
-                    <p class="ex-intro">Take a prompt that didn't work well and reconstruct it using the five key elements. Compare the original and revised versions side by side.</p>
+                    <span class="ex-badge">Ejercicio del Capítulo 2</span>
+                    <h1>Hoja de reconstrucción de prompts</h1>
+                    <p class="ex-intro">Toma un prompt que no funcionó bien y reconstrúyelo usando los cinco elementos clave. Compara la versión original y la revisada lado a lado.</p>
                 </div>
 
                 <div class="recon-grid">
                     <div class="recon-column">
-                        <h2 class="recon-column-title">Original Prompt</h2>
+                        <h2 class="recon-column-title">Prompt original</h2>
                         <div class="field-group">
-                            <label for="orig-role">Role</label>
-                            <textarea id="orig-role" class="orig-field" rows="2" placeholder="What role (if any) did you assign?"></textarea>
+                            <label for="orig-role">Rol</label>
+                            <textarea id="orig-role" class="orig-field" rows="2" placeholder="¿Qué rol (si alguno) asignaste?"></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="orig-context">Context</label>
-                            <textarea id="orig-context" class="orig-field" rows="2" placeholder="What background did you provide?"></textarea>
+                            <label for="orig-context">Contexto</label>
+                            <textarea id="orig-context" class="orig-field" rows="2" placeholder="¿Qué antecedentes diste?"></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="orig-task">Task</label>
-                            <textarea id="orig-task" class="orig-field" rows="2" placeholder="What did you ask Claude to do?"></textarea>
+                            <label for="orig-task">Tarea</label>
+                            <textarea id="orig-task" class="orig-field" rows="2" placeholder="¿Qué le pediste a Claude?"></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="orig-constraints">Constraints</label>
-                            <textarea id="orig-constraints" class="orig-field" rows="2" placeholder="What limits or requirements did you set?"></textarea>
+                            <label for="orig-constraints">Restricciones</label>
+                            <textarea id="orig-constraints" class="orig-field" rows="2" placeholder="¿Qué límites o requisitos pusiste?"></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="orig-format">Output Format</label>
-                            <textarea id="orig-format" class="orig-field" rows="2" placeholder="How did you ask for the output?"></textarea>
+                            <label for="orig-format">Formato de salida</label>
+                            <textarea id="orig-format" class="orig-field" rows="2" placeholder="¿Cómo pediste la salida?"></textarea>
                         </div>
                     </div>
 
                     <div class="recon-column">
-                        <h2 class="recon-column-title">Revised Prompt</h2>
+                        <h2 class="recon-column-title">Prompt revisado</h2>
                         <div class="field-group">
-                            <label for="rev-role">Role</label>
-                            <textarea id="rev-role" class="rev-field" rows="2" placeholder="Assign a specific role..."></textarea>
+                            <label for="rev-role">Rol</label>
+                            <textarea id="rev-role" class="rev-field" rows="2" placeholder="Asigna un rol específico..."></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="rev-context">Context</label>
-                            <textarea id="rev-context" class="rev-field" rows="2" placeholder="Add project details, tech stack..."></textarea>
+                            <label for="rev-context">Contexto</label>
+                            <textarea id="rev-context" class="rev-field" rows="2" placeholder="Agrega detalles del proyecto, stack..."></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="rev-task">Task</label>
-                            <textarea id="rev-task" class="rev-field" rows="2" placeholder="Be specific about the task..."></textarea>
+                            <label for="rev-task">Tarea</label>
+                            <textarea id="rev-task" class="rev-field" rows="2" placeholder="Sé específico con la tarea..."></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="rev-constraints">Constraints</label>
-                            <textarea id="rev-constraints" class="rev-field" rows="2" placeholder="Set clear boundaries..."></textarea>
+                            <label for="rev-constraints">Restricciones</label>
+                            <textarea id="rev-constraints" class="rev-field" rows="2" placeholder="Define límites claros..."></textarea>
                         </div>
                         <div class="field-group">
-                            <label for="rev-format">Output Format</label>
-                            <textarea id="rev-format" class="rev-field" rows="2" placeholder="Specify the structure..."></textarea>
+                            <label for="rev-format">Formato de salida</label>
+                            <textarea id="rev-format" class="rev-field" rows="2" placeholder="Especifica la estructura..."></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="recon-actions">
-                    <button id="compare-btn" class="btn btn-primary">Compare</button>
-                    <button id="download-btn" class="btn btn-secondary">Download as Markdown</button>
+                    <button id="compare-btn" class="btn btn-primary">Comparar</button>
+                    <button id="download-btn" class="btn btn-secondary">Descargar como Markdown</button>
                 </div>
 
                 <div id="compare-results" class="compare-results" style="display: none;">
-                    <h3>Comparison</h3>
+                    <h3>Comparación</h3>
                     <div id="compare-list" class="compare-list"></div>
                 </div>
             </div>
@@ -143,20 +144,20 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Rodrigo Madriz. All rights reserved.</p>
+            <p>&copy; 2026 Rodrigo Madriz. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
     (function () {
         var fields = ['role', 'context', 'task', 'constraints', 'format'];
-        var labels = ['Role', 'Context', 'Task', 'Constraints', 'Output Format'];
+        var labels = ['Rol', 'Contexto', 'Tarea', 'Restricciones', 'Formato de salida'];
 
         function getVal(id) {
             return document.getElementById(id).value.trim();
         }
 
-        // Compare
+        // Comparar
         document.getElementById('compare-btn').addEventListener('click', function () {
             var list = document.getElementById('compare-list');
             var html = '';
@@ -171,7 +172,7 @@
                 if (improved) improvements++;
 
                 var statusClass = improved ? 'improved' : (revFilled ? 'same' : 'still-empty');
-                var statusText = improved ? 'Added in revision' : (revFilled ? 'Present in both' : 'Still missing');
+                var statusText = improved ? 'Añadido en la revisión' : (revFilled ? 'Presente en ambos' : 'Aún falta');
 
                 html += '<div class="compare-item ' + statusClass + '">';
                 html += '<div class="compare-label">' + labels[i] + '</div>';
@@ -180,9 +181,9 @@
             }
 
             if (improvements > 0) {
-                html = '<p class="compare-summary">You improved <strong>' + improvements + '</strong> element' + (improvements > 1 ? 's' : '') + ' in your revision.</p>' + html;
+                html = '<p class="compare-summary">Mejoraste <strong>' + improvements + '</strong> elemento' + (improvements > 1 ? 's' : '') + ' en tu revisión.</p>' + html;
             } else {
-                html = '<p class="compare-summary">Fill in the fields that were empty in your original and try comparing again.</p>' + html;
+                html = '<p class="compare-summary">Rellena los campos que estaban vacíos en tu original y compara de nuevo.</p>' + html;
             }
 
             list.innerHTML = html;
@@ -190,31 +191,31 @@
             document.getElementById('compare-results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         });
 
-        // Download
+        // Descargar
         document.getElementById('download-btn').addEventListener('click', function () {
-            var md = '# Prompt Reconstruction Worksheet\n\n';
-            md += '## Original Prompt\n\n';
+            var md = '# Hoja de reconstrucción de prompts\n\n';
+            md += '## Prompt original\n\n';
             for (var i = 0; i < fields.length; i++) {
                 var val = getVal('orig-' + fields[i]);
                 md += '### ' + labels[i] + '\n';
-                md += (val || '_Empty_') + '\n\n';
+                md += (val || '_Vacío_') + '\n\n';
             }
             md += '---\n\n';
-            md += '## Revised Prompt\n\n';
+            md += '## Prompt revisado\n\n';
             for (var j = 0; j < fields.length; j++) {
                 var val2 = getVal('rev-' + fields[j]);
                 md += '### ' + labels[j] + '\n';
-                md += (val2 || '_Empty_') + '\n\n';
+                md += (val2 || '_Vacío_') + '\n\n';
             }
             md += '---\n\n';
-            md += '## Changes Made\n\n';
+            md += '## Cambios realizados\n\n';
             for (var k = 0; k < fields.length; k++) {
                 var o = getVal('orig-' + fields[k]);
                 var r = getVal('rev-' + fields[k]);
                 if (!o && r) {
-                    md += '- **' + labels[k] + '**: Added in revision\n';
+                    md += '- **' + labels[k] + '**: Añadido en la revisión\n';
                 } else if (o && r && o !== r) {
-                    md += '- **' + labels[k] + '**: Modified\n';
+                    md += '- **' + labels[k] + '**: Modificado\n';
                 }
             }
             md += '\n';
@@ -223,7 +224,7 @@
             var url = URL.createObjectURL(blob);
             var a = document.createElement('a');
             a.href = url;
-            a.download = 'prompt-reconstruction.md';
+            a.download = 'reconstruccion-de-prompt.md';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -243,6 +244,6 @@
             }
         })();
     </script>
-    <script src="../js/lang.js"></script>
+    <script src="/js/lang.js"></script>
 </body>
 </html>

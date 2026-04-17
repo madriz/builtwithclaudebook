@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://builtwithclaudebook.com/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtwithclaudebook.com/"/>
     <image:image>
       <image:loc>https://builtwithclaudebook.com/images/cover.jpg</image:loc>
       <image:title>Built with Claude in 28 Days book cover</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://builtwithclaudebook.com/es/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtwithclaudebook.com/"/>
+    <image:image>
+      <image:loc>https://builtwithclaudebook.com/images/cover.jpg</image:loc>
+      <image:title>Portada del libro 28 Días con Claude</image:title>
     </image:image>
   </url>
 </urlset>

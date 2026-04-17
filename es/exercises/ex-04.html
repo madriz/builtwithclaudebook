@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZVHCD3NRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SZVHCD3NRF');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <title>Ejercicio 4: Recorrido por el flujo de Artefactos — 28 Días con Claude</title>
+    <meta name="description" content="Ejercicio del Capítulo 4 de 28 Días con Claude. El flujo de cinco pasos para usar los Artefactos de Claude y producir salidas limpias y versionadas de tus sesiones.">
+    <meta name="keywords" content="Artefactos de Claude, flujo de Claude, recorrido de Artefactos, versionado de Claude, ejercicio 28 Días con Claude, salidas de Claude">
+    <meta name="author" content="Rodrigo Madriz">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://builtwithclaudebook.com/es/exercises/ex-04.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-04.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-04.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ejercicio 4: Recorrido por el flujo de Artefactos — 28 Días con Claude">
+    <meta property="og:description" content="El flujo de cinco pasos para usar los Artefactos de Claude y producir salidas limpias y versionadas. Ejercicio del Capítulo 4.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/es/exercises/ex-04.html">
+    <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <meta property="og:site_name" content="28 Días con Claude">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ejercicio 4: Recorrido por el flujo de Artefactos — 28 Días con Claude">
+    <meta name="twitter:description" content="El flujo de cinco pasos para producir salidas limpias y versionadas con los Artefactos de Claude.">
+    <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        (function(){
+            var c = document.cookie.split(';');
+            var ok = false;
+            for (var i = 0; i < c.length; i++) {
+                if (c[i].trim().indexOf('bwc_unlocked=1') === 0) { ok = true; break; }
+            }
+            if (!ok) window.location.href = '/es/exercises.html';
+        })();
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="/es/" class="logo">28 Días con Claude</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="/es/exercises.html">Ejercicios</a>
+                <a href="/es/downloads.html">Descargas</a>
+                <span class="lang-toggle" role="group" aria-label="Idioma">
+                    <a href="/exercises/ex-04.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/exercises/ex-04.html" data-lang="es">ES</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="ex-page">
+            <div class="container">
+                <a href="/es/exercises.html" class="back-link">&larr; Volver a ejercicios</a>
+
+                <div class="ex-header">
+                    <span class="ex-badge">Ejercicio del Capítulo 4</span>
+                    <h1>Recorrido por el flujo de Artefactos</h1>
+                    <p class="ex-intro">Aprende el flujo de cinco pasos para usar los Artefactos de Claude y producir salidas limpias y versionadas, en lugar de enterrarlas en conversaciones largas.</p>
+                </div>
+
+                <div class="walkthrough-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h2>Identifica una tarea enterrada en la conversación</h2>
+                            <p>Revisa tus conversaciones recientes con Claude. Encuentra una tarea donde la salida útil &mdash; código, un documento, un archivo de configuración &mdash; esté dispersa en varios mensajes. Esa es la tarea que rehacerás con Artefactos.</p>
+                            <picture>
+                                <source srcset="/images/ex04-step01.webp" type="image/webp">
+                                <img src="/images/ex04-step01.jpg" alt="Paso 1: encontrar una tarea enterrada en la conversación" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-lg);margin-top:1rem;">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h2>Empieza una nueva sesión con tu archivo de conocimiento cargado</h2>
+                            <p>Abre una conversación nueva. Si usas Proyectos de Claude, añade el archivo al proyecto. Si estás en una conversación regular, pega el contenido del archivo como primer mensaje. Así Claude tiene el contexto completo desde el inicio.</p>
+                            <picture>
+                                <source srcset="/images/ex04-step02.webp" type="image/webp">
+                                <img src="/images/ex04-step02.jpg" alt="Paso 2: cargar el archivo de conocimiento" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-lg);margin-top:1rem;">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h2>Pide a Claude que produzca la primera salida como Artefacto</h2>
+                            <p>En tu prompt, pide explícitamente que Claude cree un Artefacto. Sé claro sobre qué debe contener y en qué formato. Por ejemplo: "Crea un Artefacto con el HTML del encabezado de mi landing page".</p>
+                            <picture>
+                                <source srcset="/images/ex04-step03.webp" type="image/webp">
+                                <img src="/images/ex04-step03.jpg" alt="Paso 3: solicitar un Artefacto" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-lg);margin-top:1rem;">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h2>Sigue iterando &mdash; cada revisión actualiza el Artefacto</h2>
+                            <p>A medida que pides cambios, Claude actualiza el mismo Artefacto en vez de crear nuevos bloques de código en la conversación. Puedes ver el historial de versiones y la conversación se mantiene limpia. Cada iteración se apoya en la anterior.</p>
+                            <picture>
+                                <source srcset="/images/ex04-step04.webp" type="image/webp">
+                                <img src="/images/ex04-step04.jpg" alt="Paso 4: iterar sobre el Artefacto" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-lg);margin-top:1rem;">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h2>Descarga el Artefacto cuando termine la sesión</h2>
+                            <p>Cuando estés conforme con la salida, descarga el Artefacto directamente. No necesitas revisar el historial ni copiar y pegar desde bloques de código. La versión final está lista para usarse.</p>
+                            <picture>
+                                <source srcset="/images/ex04-step05.webp" type="image/webp">
+                                <img src="/images/ex04-step05.jpg" alt="Paso 5: descargar el Artefacto final" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-lg);margin-top:1rem;">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h2>Consejos para usar Artefactos con eficacia</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-number">1</div>
+                            <h3>Un artefacto por asunto</h3>
+                            <p>No le pidas a Claude poner HTML, CSS y JavaScript en un solo Artefacto. Pide Artefactos separados para cada archivo. Facilita iterar sobre una parte sin afectar las demás.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">2</div>
+                            <h3>Nombra tus artefactos explícitamente</h3>
+                            <p>En lugar de dejar que Claude autodenomine los artefactos, incluye el nombre de archivo en tu petición: "Crea un Artefacto llamado <code>header.html</code> con...". Así mantienes la sesión organizada cuando tienes varios artefactos.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">3</div>
+                            <h3>Usa artefactos para todo lo que copies fuera</h3>
+                            <p>Los Artefactos no son solo para código. Úsalos para documentación, borradores de email, planes de proyecto o cualquier salida que planees usar fuera de Claude. Si lo vas a copiar, debería ser un Artefacto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Rodrigo Madriz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="/js/lang.js"></script>
+</body>
+</html>

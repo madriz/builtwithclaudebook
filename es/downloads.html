@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZVHCD3NRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SZVHCD3NRF');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <title>Descargas — 28 Días con Claude</title>
+    <meta name="description" content="Plantillas y hojas de trabajo descargables de 28 Días con Claude: archivo de conocimiento de proyecto, reconstrucción de prompts, reglas de validación y más.">
+    <meta name="keywords" content="28 Días con Claude descargas, plantillas Claude IA, archivo de conocimiento, hoja de prompts, hoja de validación, plantillas libro IA">
+    <meta name="author" content="Rodrigo Madriz">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://builtwithclaudebook.com/es/downloads.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/downloads.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/downloads.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Descargas — 28 Días con Claude">
+    <meta property="og:description" content="Plantillas y hojas de trabajo descargables de 28 Días con Claude.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/es/downloads.html">
+    <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <meta property="og:site_name" content="28 Días con Claude">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Descargas — 28 Días con Claude">
+    <meta name="twitter:description" content="Plantillas y hojas de trabajo descargables de 28 Días con Claude.">
+    <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="/es/" class="logo">28 Días con Claude</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="/es/">Inicio</a>
+                <a href="/es/exercises.html">Ejercicios</a>
+                <a href="/es/downloads.html">Descargas</a>
+                <span class="lang-toggle" role="group" aria-label="Idioma">
+                    <a href="/downloads.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/downloads.html" data-lang="es">ES</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Puerta de acceso -->
+        <section id="auth-gate" class="auth-gate">
+            <div class="auth-box">
+                <h2>Acceso para lectores</h2>
+                <p class="auth-subtitle">Ingresa el código de acceso de tu libro para acceder a los ejercicios y recursos.</p>
+                <form id="auth-form">
+                    <label for="auth-input" class="visually-hidden">Código de acceso</label>
+                    <input type="text" id="auth-input" name="passcode" placeholder="Ingresa el código" autocomplete="off" autofocus aria-describedby="auth-error auth-hint">
+                    <button type="submit" class="btn btn-primary">Desbloquear</button>
+                </form>
+                <p id="auth-error" class="auth-error" role="alert">Código incorrecto. Inténtalo de nuevo.</p>
+                <p id="auth-hint" class="auth-hint">El código se encuentra en la introducción del libro.</p>
+            </div>
+        </section>
+
+        <!-- Contenido protegido -->
+        <div id="gated-content" style="display: none;">
+            <section class="downloads-page">
+                <div class="container">
+                    <h1>Descargas y plantillas</h1>
+                    <p class="downloads-intro">
+                        Plantillas y hojas de trabajo mencionadas en el libro. Descárgalas para usarlas como punto de
+                        partida en tus propios proyectos.
+                    </p>
+
+                    <div class="download-cards">
+                        <div class="download-card">
+                            <h3>Plantilla de archivo de conocimiento de proyecto</h3>
+                            <p>La plantilla para crear archivos de conocimiento que dan a Claude contexto persistente sobre tu proyecto entre sesiones. Referenciada en el Capítulo 5.</p>
+                            <a href="/downloads/project-knowledge-template.md" class="btn btn-secondary" download>Descargar plantilla</a>
+                            <p class="file-type">.md &middot; Markdown</p>
+                        </div>
+
+                        <div class="download-card">
+                            <h3>Hoja de reconstrucción de prompts</h3>
+                            <p>Una hoja estructurada para hacer ingeniería inversa de prompts eficaces. Desglosa qué funcionó, qué no, y construye patrones reutilizables.</p>
+                            <a href="/downloads/prompt-reconstruction-worksheet.md" class="btn btn-secondary" download>Descargar hoja</a>
+                            <p class="file-type">.md &middot; Markdown</p>
+                        </div>
+
+                        <div class="download-card">
+                            <h3>Hoja de reglas de validación</h3>
+                            <p>Usa esta hoja para definir reglas de validación para tu código generado con IA. Establece compuertas de calidad antes de aceptar las salidas de Claude.</p>
+                            <a href="/downloads/validation-rule-worksheet.md" class="btn btn-secondary" download>Descargar hoja</a>
+                            <p class="file-type">.md &middot; Markdown</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Rodrigo Madriz. Todos los derechos reservados.</p>
+            <p class="footer-links">
+                <a href="/downloads.html">English</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="/js/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZVHCD3NRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SZVHCD3NRF');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <title>Ejercicios — 28 Días con Claude</title>
+    <meta name="description" content="Ejercicios capítulo a capítulo de 28 Días con Claude: evaluador de prompts, reconstrucción de prompts, archivo de conocimiento de proyecto, flujo de artefactos y más.">
+    <meta name="keywords" content="28 Días con Claude ejercicios, Claude IA ejercicios, evaluador de prompts, ingeniería de prompts, archivo de conocimiento, artefactos de Claude, ejercicios libro IA">
+    <meta name="author" content="Rodrigo Madriz">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://builtwithclaudebook.com/es/exercises.html">
+    <link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises.html">
+    <link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ejercicios — 28 Días con Claude">
+    <meta property="og:description" content="Ejercicios capítulo a capítulo de 28 Días con Claude: evaluador de prompts, reconstrucción de prompts, archivo de conocimiento de proyecto y más.">
+    <meta property="og:url" content="https://builtwithclaudebook.com/es/exercises.html">
+    <meta property="og:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <meta property="og:site_name" content="28 Días con Claude">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ejercicios — 28 Días con Claude">
+    <meta name="twitter:description" content="Ejercicios capítulo a capítulo de 28 Días con Claude.">
+    <meta name="twitter:image" content="https://builtwithclaudebook.com/images/cover.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/exercises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="/es/" class="logo">28 Días con Claude</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="/es/">Inicio</a>
+                <a href="/es/exercises.html">Ejercicios</a>
+                <a href="/es/downloads.html">Descargas</a>
+                <span class="lang-toggle" role="group" aria-label="Idioma">
+                    <a href="/exercises.html" data-lang="en">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="/es/exercises.html" data-lang="es">ES</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Puerta de acceso -->
+        <section id="auth-gate" class="auth-gate">
+            <div class="auth-box">
+                <h2>Acceso para lectores</h2>
+                <p class="auth-subtitle">Ingresa el código de acceso de tu libro para acceder a los ejercicios y recursos.</p>
+                <form id="auth-form">
+                    <label for="auth-input" class="visually-hidden">Código de acceso</label>
+                    <input type="text" id="auth-input" name="passcode" placeholder="Ingresa el código" autocomplete="off" autofocus aria-describedby="auth-error auth-hint">
+                    <button type="submit" class="btn btn-primary">Desbloquear</button>
+                </form>
+                <p id="auth-error" class="auth-error" role="alert">Código incorrecto. Inténtalo de nuevo.</p>
+                <p id="auth-hint" class="auth-hint">El código se encuentra en la introducción del libro.</p>
+            </div>
+        </section>
+
+        <!-- Contenido protegido -->
+        <div id="gated-content" style="display: none;">
+            <section class="exercises-page">
+                <div class="container">
+                    <h1>Ejercicios por capítulo</h1>
+                    <p class="exercises-intro">
+                        Ejercicios prácticos para cada capítulo. Trabájalos para reforzar lo aprendido
+                        y desarrollar tus habilidades de forma progresiva.
+                    </p>
+
+                    <!-- Nivel 1: Fundamentos -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Nivel 1</span>
+                            <h2>Fundamentos</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <a href="/es/exercises/ex-01.html" class="exercise-card">
+                                <span class="exercise-number">Cap 1</span>
+                                <div class="exercise-info">
+                                    <h3>Evaluador de Prompts</h3>
+                                    <p>Pega un prompt y evalúalo en los cinco elementos clave de un prompt eficaz. Obtén sugerencias accionables para mejorarlo.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <a href="/es/exercises/ex-02.html" class="exercise-card">
+                                <span class="exercise-number">Cap 2</span>
+                                <div class="exercise-info">
+                                    <h3>Hoja de reconstrucción de prompts</h3>
+                                    <p>Toma un prompt que no funcionó y reconstrúyelo lado a lado. Compara la versión original y la revisada.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <a href="/es/exercises/ex-03.html" class="exercise-card">
+                                <span class="exercise-number">Cap 3</span>
+                                <div class="exercise-info">
+                                    <h3>Constructor de archivo de conocimiento</h3>
+                                    <p>Construye paso a paso un archivo de conocimiento de proyecto con vista previa en vivo. Expórtalo en Markdown para pegar en Claude.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <a href="/es/exercises/ex-04.html" class="exercise-card">
+                                <span class="exercise-number">Cap 4</span>
+                                <div class="exercise-info">
+                                    <h3>Recorrido por el flujo de Artefactos</h3>
+                                    <p>Aprende el flujo de cinco pasos para usar Artefactos de Claude y producir salidas limpias y versionadas.</p>
+                                </div>
+                                <span class="exercise-link-arrow">&rarr;</span>
+                            </a>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 5</span>
+                                <div class="exercise-info">
+                                    <h3>Plantilla de brief de escritura</h3>
+                                    <p>Una plantilla estructurada para informar a Claude en proyectos de escritura larga. Define tu tema, tesis, audiencia, restricciones de voz, fuentes y resultado deseado antes de comenzar.</p>
+                                    <a href="/downloads/writing-brief-template.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 2: Productos dinámicos -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Nivel 2</span>
+                            <h2>Productos dinámicos</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 6</span>
+                                <div class="exercise-info">
+                                    <h3>Tu primera sesión de Claude Code</h3>
+                                    <p>Una lista de verificación paso a paso para tu primera sesión con Claude Code. Instalar, navegar, obtener un resumen del proyecto, dar una tarea acotada, verificar la salida y parar. Cubre qué observar en cada paso y cómo se ve terminado.</p>
+                                    <a href="/downloads/claude-code-first-session.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 7</span>
+                                <div class="exercise-info">
+                                    <h3>Plantilla CLAUDE.md</h3>
+                                    <p>Una plantilla CLAUDE.md lista para usar en cualquier proyecto. Cubre visión general, stack técnico, archivos clave, convenciones de nombres y formato, restricciones, decisiones recientes con su razonamiento, y estado actual.</p>
+                                    <a href="/downloads/claude-md-template.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 8</span>
+                                <div class="exercise-info">
+                                    <h3>Lista de verificación de calidad de datos</h3>
+                                    <p>Cuatro capas de validación de calidad de datos siguiendo el marco del libro: reglas del scraper, restricciones de base de datos, chequeos diarios de monitoreo y puntos del reporte semanal de QA. Cada capa incluye ejemplos y líneas en blanco para tu proyecto.</p>
+                                    <a href="/downloads/data-quality-checklist.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 9</span>
+                                <div class="exercise-info">
+                                    <h3>Lista de verificación SEO previa al lanzamiento</h3>
+                                    <p>Todo lo que debes verificar antes de lanzar una plataforma basada en datos: sitemap, URLs canónicas, hreflang, Google Search Console, velocidad, datos estructurados, monitoreo de 404. Cada ítem incluye una línea sobre por qué importa.</p>
+                                    <a href="/downloads/seo-launch-checklist.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 10</span>
+                                <div class="exercise-info">
+                                    <h3>Lista de verificación para desplegar</h3>
+                                    <p>Lista en tres fases: previo al despliegue (tests, secretos, preview), infraestructura (servicios, dominios, SSL) y posterior (verificar sitio en vivo, monitoreo, indexación). Incluye una sección "si algo sale mal".</p>
+                                    <a href="/downloads/deployment-checklist.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 3: Apps full-stack -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Nivel 3</span>
+                            <h2>Apps full-stack</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 11</span>
+                                <div class="exercise-info">
+                                    <h3>Hoja de depuración</h3>
+                                    <p>La estructura de depuración en cinco pasos como hoja rellenable. Para cada paso &mdash; describir síntoma, identificar qué cambió, formar hipótesis, investigar, verificar solución &mdash; una pregunta y espacio para tu respuesta.</p>
+                                    <a href="/downloads/debugging-worksheet.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 12</span>
+                                <div class="exercise-info">
+                                    <h3>Lista de higiene de producción</h3>
+                                    <p>Tres listas para tres situaciones: verificaciones previas al despliegue, revisiones mensuales de infraestructura y seguridad, y respuesta ante fallas. Items con casillas para ejecutar con frecuencia.</p>
+                                    <a href="/downloads/production-hygiene-checklist.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 13</span>
+                                <div class="exercise-info">
+                                    <h3>Lista de base de código compartida</h3>
+                                    <p>Una lista para gestionar dos o más productos sobre infraestructura compartida. Cubre configuración de CLAUDE.md, pruebas cruzadas, verificación de despliegues separados, seguimiento de afiliados y registro de decisiones.</p>
+                                    <a href="/downloads/shared-codebase-checklist.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 14</span>
+                                <div class="exercise-info">
+                                    <h3>Primera llamada a la API de Anthropic</h3>
+                                    <p>Un script mínimo de Python que muestra una llamada a la API de Anthropic. Unas 15 líneas, con comentarios. Import, configuración del cliente, mensaje con system prompt, imprimir respuesta. Incluye un recordatorio: nunca commits tu API key.</p>
+                                    <a href="/downloads/first-api-call.py" class="btn btn-sm" download>Descargar .py</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 15</span>
+                                <div class="exercise-info">
+                                    <h3>Plantilla de system prompt</h3>
+                                    <p>La plantilla de system prompt de cuatro componentes: Rol, Tarea, Formato de salida y Restricciones. Cada sección tiene una pregunta guía y un ejemplo concreto. Incluye una lista de verificación para probar tu prompt ensamblado.</p>
+                                    <a href="/downloads/system-prompt-template.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 16</span>
+                                <div class="exercise-info">
+                                    <h3>Lista de preparación para MCP</h3>
+                                    <p>Seis preguntas que debes responder antes de construir una integración MCP: qué servicio, qué flujos de datos, qué lee Claude, qué escribe Claude, dónde está el punto de revisión humana y qué pasa cuando la conexión falla.</p>
+                                    <a href="/downloads/mcp-readiness-checklist.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 4: Escalar y enviar -->
+                    <div class="tier-section">
+                        <div class="tier-section-header">
+                            <span class="tier-badge">Nivel 4</span>
+                            <h2>Escalar y enviar</h2>
+                        </div>
+                        <div class="exercise-list">
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 17</span>
+                                <div class="exercise-info">
+                                    <h3>Plantilla de mapeo de flujos de trabajo</h3>
+                                    <p>Mapea tu flujo manual actual y rediséñalo con automatización agéntica. Formato a dos columnas: pasos manuales a la izquierda, rediseño agéntico a la derecha. Incluye la prueba de tres preguntas del capítulo para cada paso.</p>
+                                    <a href="/downloads/workflow-mapping-template.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 18</span>
+                                <div class="exercise-info">
+                                    <h3>Brief de diseño: Claude embebido</h3>
+                                    <p>Un brief para integrar Claude dentro de un producto. Cubre el problema que Claude resuelve para el usuario, acceso a datos, acciones permitidas y prohibidas, modelo de interacción, controles de operador, modos de falla y modelado de costos.</p>
+                                    <a href="/downloads/embedded-claude-design-brief.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 19</span>
+                                <div class="exercise-info">
+                                    <h3>Inventario de portafolio</h3>
+                                    <p>Una plantilla en forma de tabla para inventariar tu stack de fundador solo. Columnas para nombre, estado, costo de infraestructura mensual, tiempo semanal invertido, modelo de ingresos y próximo hito. Incluye preguntas de evaluación.</p>
+                                    <a href="/downloads/portfolio-inventory-template.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 20</span>
+                                <div class="exercise-info">
+                                    <h3>Marco de gobernanza de IA</h3>
+                                    <p>El marco de gobernanza de cinco elementos como documento rellenable: política de uso apropiado, modelo de supervisión humana, reglas de manejo de datos, plan de respuesta ante fallas y cadencia de revisión. Cada sección tiene una pregunta guía y espacio para tu organización.</p>
+                                    <a href="/downloads/governance-framework-template.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 21</span>
+                                <div class="exercise-info">
+                                    <h3>Hoja de traducción a la empresa</h3>
+                                    <p>Cinco patrones traducidos de solo a equipo: verificación, gestión de contexto, despliegue, gobernanza y control de costos. Para cada patrón, documenta cómo se ve para una persona, cómo se ve para un equipo y qué cambia.</p>
+                                    <a href="/downloads/enterprise-translation-worksheet.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                            <div class="exercise-card">
+                                <span class="exercise-number">Cap 22</span>
+                                <div class="exercise-info">
+                                    <h3>Evaluación de responsabilidad con IA</h3>
+                                    <p>Una plantilla de evaluación estructurada que cubre seis áreas: qué decisiones influye tu IA, a quién afecta, peores resultados posibles, asignación de responsabilidad, política de divulgación y requerimientos regulatorios.</p>
+                                    <a href="/downloads/ai-liability-assessment.md" class="btn btn-sm" download>Descargar .md</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Rodrigo Madriz. Todos los derechos reservados.</p>
+            <p class="footer-links">
+                <a href="/exercises.html">English</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var nav = document.getElementById('nav-menu');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    nav.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
+    <script src="/js/lang.js"></script>
+</body>
+</html>
