@@ -497,6 +497,69 @@ img {
     color: var(--text-primary);
 }
 
+/* ===== FAQ ===== */
+.faq {
+    padding: 64px 0 32px;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+}
+
+.faq-item > summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-primary);
+    list-style: none;
+    position: relative;
+    padding-right: 28px;
+}
+
+.faq-item > summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item > summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.faq-item[open] > summary::after {
+    content: '\2013';
+}
+
+.faq-item > p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
 /* ===== Book Access ===== */
 .book-access {
     padding: 80px 0;
@@ -698,6 +761,79 @@ img {
     border-radius: 4px;
     margin-left: auto;
     white-space: nowrap;
+}
+
+/* ===== Access Badges (exercises listing) ===== */
+.ex-access-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.ex-access-free {
+    color: var(--success);
+    background: rgba(0, 186, 124, 0.15);
+}
+
+.ex-access-locked {
+    color: var(--text-muted);
+    background: rgba(107, 114, 128, 0.18);
+}
+
+.exercise-info .ex-access-badge + .btn,
+.exercise-info .btn + .ex-access-badge {
+    margin-left: 0;
+}
+
+/* ===== Gate Modal (exercises listing) ===== */
+.gate-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.gate-modal[style*="flex"] {
+    display: flex !important;
+}
+
+.gate-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(2px);
+}
+
+.gate-modal-box {
+    position: relative;
+    z-index: 1;
+    max-width: 420px;
+    width: 100%;
+}
+
+.gate-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: 0;
+    color: var(--text-muted);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.gate-modal-close:hover {
+    color: var(--text-primary);
 }
 
 /* ===== Downloads Page ===== */

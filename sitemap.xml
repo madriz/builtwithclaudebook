@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://builtwithclaudebook.com/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/"/>
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://builtwithclaudebook.com/es/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/"/>
@@ -27,5 +27,37 @@
       <image:loc>https://builtwithclaudebook.com/images/cover.jpg</image:loc>
       <image:title>Portada del libro 28 Días con Claude</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://builtwithclaudebook.com/exercises.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises.html"/>
+  </url>
+  <url>
+    <loc>https://builtwithclaudebook.com/es/exercises.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises.html"/>
+  </url>
+  <url>
+    <loc>https://builtwithclaudebook.com/exercises/ex-01.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-01.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-01.html"/>
+  </url>
+  <url>
+    <loc>https://builtwithclaudebook.com/es/exercises/ex-01.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-01.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-01.html"/>
   </url>
 </urlset>
