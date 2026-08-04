@@ -890,8 +890,231 @@ img {
     text-align: center;
 }
 
+/* ===== Updates Page ===== */
+.updates-page {
+    padding: 48px 0 80px;
+}
+
+.updates-page h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.updates-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.updates-intro {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 48px;
+    max-width: 760px;
+}
+
+.update-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.update-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    transition: border-color 0.2s;
+}
+
+.update-card:hover {
+    border-color: var(--accent);
+}
+
+.update-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.update-card h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.update-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    max-width: 760px;
+}
+
+.update-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.update-status {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.status-growing {
+    color: var(--success);
+    background: rgba(0, 186, 124, 0.15);
+}
+
+.status-new {
+    color: var(--accent);
+    background: rgba(0, 172, 237, 0.15);
+}
+
+.status-parked {
+    color: var(--text-muted);
+    background: rgba(107, 114, 128, 0.18);
+}
+
+.status-pending {
+    color: var(--warning);
+    background: rgba(255, 173, 31, 0.15);
+}
+
+.update-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.updates-closing {
+    margin-top: 48px;
+    padding: 28px 32px;
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.updates-closing p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.75;
+    max-width: 720px;
+}
+
+.updates-back {
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* ===== Updates CTA (home page) ===== */
+.updates-cta {
+    padding: 0 0 80px;
+}
+
+.updates-cta-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+}
+
+.updates-cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.updates-cta p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 720px;
+    margin-bottom: 24px;
+}
+
+/* ===== Articles (home page) ===== */
+.articles {
+    padding: 72px 0;
+    background: var(--bg-secondary);
+}
+
+.articles h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 840px;
+}
+
+.article-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.article-item:last-child {
+    border-bottom: none;
+}
+
+.article-title {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.article-title:hover {
+    color: var(--accent);
+}
+
+.article-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.articles-more {
+    margin-top: 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+    .update-card {
+        padding: 24px 20px;
+    }
+
+    .updates-closing {
+        padding: 24px 20px;
+    }
+
+    .updates-cta-box {
+        padding: 28px 22px;
+    }
+
+    .article-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+
     .hero {
         padding: 48px 0 64px;
     }

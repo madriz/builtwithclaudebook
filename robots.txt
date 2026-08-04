@@ -1,6 +1,8 @@
 # robots.txt for builtwithclaudebook.com
 User-agent: *
 Allow: /
+Allow: /updates.html
+Allow: /es/updates.html
 Allow: /exercises.html
 Allow: /es/exercises.html
 Allow: /exercises/ex-01.html
