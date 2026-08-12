@@ -1,0 +1,62 @@
+# Built with Claude in 28 Days
+
+> A non-fiction book and living portfolio documenting what one non-technical founder built using Claude as a development partner. Five products shipped in 28 days, $70/month to run. The projects kept growing after publication.
+
+This is the expanded version of https://builtwithclaudebook.com/llms.txt. Same index, with fuller descriptions of the author, the book, and each project.
+
+## Author
+- [Rodrigo Madriz](https://builtwithclaudebook.com/) — Toronto-based technology entrepreneur, mechanical engineer, former adjunct faculty at Toronto Metropolitan University
+
+A mechanical engineer by training rather than a software developer, writing from the position the book is addressed to: the non-technical founder who has ideas that used to require a team. Every project described on this site was built and shipped personally, using Claude as the development partner. The book is a first-person account of that work, not a survey of the field.
+
+## The Book
+- [English Edition on Amazon](https://www.amazon.ca/dp/B0GVPXGS5Q?tag=homegadge0956-20) — Built with Claude in 28 Days
+- [Spanish Edition on Amazon](https://www.amazon.ca/dp/B0GX2WTWVD?tag=homegadge0956-20) — 28 Días con Claude
+- [Companion Site (English)](https://builtwithclaudebook.com/)
+- [Companion Site (Spanish)](https://builtwithclaudebook.com/es/)
+
+Twenty-two chapters across four tiers: the Conversation Layer (Claude as a thinking, research, and writing partner), the Builder Layer (Claude Code, data collection, deployment, production systems), the Platform Layer (the Anthropic API, structured outputs, MCP, agents, Claude inside a product), and the Strategy Layer (the solo founder stack, governance, enterprise, privacy and liability).
+
+The core argument is that the interesting shift is not time saved. It is the boundary of what one person can build moving to a place it has not been before. The question the book keeps returning to is not "what can I do faster," but "what problems have I always had that I never had the time or resources to tackle."
+
+The numbers behind it: 28 days, roughly 570 commits and 80,000 lines of code across the first two products, and about $70 CAD per month to keep the whole portfolio running.
+
+## Projects from the Book — Current Status (August 2026)
+- [Project Updates](https://builtwithclaudebook.com/updates.html) — Where all five projects are now
+
+### [HomeGadgets.ca](https://homegadgets.ca) — Scaling
+A Canadian price comparison platform for consumer electronics and appliances, serving shoppers who want to know which retailer actually has the better price today. It has grown from the 11,000 products described in the book to more than 20,000 unique SKUs across 125+ retailers, 20 product categories, and 140+ major brands. The platform now runs an MCP server for AI agent integration, an AI-powered search tool, an enterprise API, and a "Price Now" feature built to solve the data staleness problem common to price comparison sites.
+
+### [ShopButler.ai](https://shopbutler.ai) — New venture
+A framework for consumer-driven agentic shopping: AI agents that research, compare, and act on behalf of the shopper rather than on behalf of the retailer. It was born from the HomeGadgets data infrastructure, which gave it a catalog and a pricing backbone to reason over. This is the book's Platform Layer thesis playing out in production, with Claude as infrastructure inside a product rather than a tool used to build one.
+
+### [Credentia.one](https://credentia.one) — New venture
+An open document standard for job applications. Candidates generate a single portable `.credentia.json` file holding their complete professional record, and employers receive structured, verified data their systems can read without parsing errors. The schema is open source under Apache 2.0, the candidate tool is free, and employers pay per job posting. It came from the same observation that drove every other project here: a broken system everyone accepts because fixing it used to be too expensive.
+
+### [ContextQuant.com](https://contextquant.com) — Expanding
+A quantitative research platform applying natural language processing to SEC filings and other financial documents, built for analysts and researchers looking for signal in disclosure language. It has expanded past the three original studies described in the book, with new signal types and sector-specific testing across finance, insurance, and healthcare to check whether the wide-market hypothesis holds at the industry level. The book uses it as the worked example for structured outputs and signal extraction with the Anthropic API.
+
+### [BasketBrain.ca](https://basketbrain.ca) — Parked
+A Canadian grocery price comparison service sharing a codebase with HomeGadgets, which is what made it cheap to attempt in the first place. The model proved technically viable, but the economics of grocery price data did not justify the infrastructure cost at this stage, so it was parked deliberately rather than abandoned. The catalog normalization work was absorbed into HomeGadgets and the site remains live as a reference.
+
+### [Neural Strip](https://neuralstrip.com) — Publishing daily
+An automated daily AI cartoon pipeline that writes, illustrates, and publishes a strip every morning at 8am UTC with no human in the loop. It has kept running without intervention since the book was written. It appears in the chapters on prompting, structured outputs, and agentic workflows as the smallest complete example of an unattended production system.
+
+### [MerchantLink](https://merchantlink.ca) — Pre-pilot
+B2B SaaS loyalty infrastructure aimed at Canadian banks and their merchant networks. It is pre-pilot, waiting on a bank partner, which is the honest state of most enterprise software at this stage. The book uses it for the chapters on persistent project context, MCP and third-party integrations, and what changes when the buyer is an institution.
+
+## Free Resources
+- [Prompt Evaluator Exercise](https://builtwithclaudebook.com/exercises/ex-01.html) — Free interactive tool to score your AI prompts
+- [All Exercises](https://builtwithclaudebook.com/exercises.html) — Four interactive exercises from the book
+
+The prompt evaluator is open to everyone and needs no purchase or signup. It scores a pasted prompt across the five elements of effective prompting and returns specific feedback. The remaining three exercises and the downloadable templates are reader resources for people who have the book.
+
+## Articles by the Author
+- [Lessons on Agentic Commerce: Chapter 2](https://medium.com/@Madriz/lessons-on-agentic-commerce-chapter-2-7ad5b6f0fe7d)
+- [Agentic Commerce Thought Experiments](https://medium.com/@Madriz/agentic-commerce-thought-experiments-1ad593a64f39)
+- [Are Product Reviews Lying to You?](https://medium.com/@Madriz/are-product-reviews-lying-to-you-we-analyzed-2-4-million-reviews-to-find-out-a272dbcd5e96)
+- [The Blind Spot in Every Analyst's Model](https://medium.com/@Madriz/the-blind-spot-in-every-analysts-model-93ece4766b36)
+
+## Optional
+- [Read more articles on Medium](https://medium.com/@Madriz)
+- [Substack](https://substack.com/@madriz)

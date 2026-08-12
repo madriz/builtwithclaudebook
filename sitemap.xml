@@ -53,6 +53,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtwithclaudebook.com/exercises.html"/>
   </url>
   <url>
     <loc>https://builtwithclaudebook.com/es/exercises.html</loc>
@@ -61,6 +62,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtwithclaudebook.com/exercises.html"/>
   </url>
   <url>
     <loc>https://builtwithclaudebook.com/exercises/ex-01.html</loc>
@@ -69,6 +71,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-01.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-01.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtwithclaudebook.com/exercises/ex-01.html"/>
   </url>
   <url>
     <loc>https://builtwithclaudebook.com/es/exercises/ex-01.html</loc>
@@ -77,5 +80,6 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://builtwithclaudebook.com/exercises/ex-01.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://builtwithclaudebook.com/es/exercises/ex-01.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtwithclaudebook.com/exercises/ex-01.html"/>
   </url>
 </urlset>

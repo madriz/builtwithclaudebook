@@ -1,21 +1,49 @@
 # robots.txt for builtwithclaudebook.com
+# Strategy: open to every crawler, except reader-only gated content.
+
 User-agent: *
 Allow: /
-Allow: /updates.html
-Allow: /es/updates.html
-Allow: /exercises.html
-Allow: /es/exercises.html
-Allow: /exercises/ex-01.html
-Allow: /es/exercises/ex-01.html
+Disallow: /amazon-redirect.html
 Disallow: /exercises/ex-02.html
 Disallow: /exercises/ex-03.html
 Disallow: /exercises/ex-04.html
 Disallow: /es/exercises/ex-02.html
 Disallow: /es/exercises/ex-03.html
 Disallow: /es/exercises/ex-04.html
-Disallow: /downloads/
 Disallow: /downloads.html
 Disallow: /es/downloads.html
+Disallow: /downloads/
+
+# AI Crawlers — explicitly welcomed.
+#
+# These are grouped rather than given one bare "Allow: /" block each on
+# purpose. A crawler obeys only the most specific group that names it, and
+# ignores the "*" group completely. A standalone "Allow: /" under GPTBot
+# would therefore grant GPTBot more access than an anonymous crawler gets,
+# opening the gated exercises and the template downloads to exactly the
+# agents most likely to republish them. Repeating the Disallow list keeps
+# the welcome genuine and the gate intact.
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: anthropic-ai
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: Applebot-Extended
+User-agent: cohere-ai
+User-agent: Meta-ExternalAgent
+Allow: /
 Disallow: /amazon-redirect.html
+Disallow: /exercises/ex-02.html
+Disallow: /exercises/ex-03.html
+Disallow: /exercises/ex-04.html
+Disallow: /es/exercises/ex-02.html
+Disallow: /es/exercises/ex-03.html
+Disallow: /es/exercises/ex-04.html
+Disallow: /downloads.html
+Disallow: /es/downloads.html
+Disallow: /downloads/
 
 Sitemap: https://builtwithclaudebook.com/sitemap.xml

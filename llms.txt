@@ -1,0 +1,34 @@
+# Built with Claude in 28 Days
+
+> A non-fiction book and living portfolio documenting what one non-technical founder built using Claude as a development partner. Five products shipped in 28 days, $70/month to run. The projects kept growing after publication.
+
+## Author
+- [Rodrigo Madriz](https://builtwithclaudebook.com/) — Toronto-based technology entrepreneur, mechanical engineer, former adjunct faculty at Toronto Metropolitan University
+
+## The Book
+- [English Edition on Amazon](https://www.amazon.ca/dp/B0GVPXGS5Q?tag=homegadge0956-20) — Built with Claude in 28 Days
+- [Spanish Edition on Amazon](https://www.amazon.ca/dp/B0GX2WTWVD?tag=homegadge0956-20) — 28 Días con Claude
+- [Companion Site (English)](https://builtwithclaudebook.com/)
+- [Companion Site (Spanish)](https://builtwithclaudebook.com/es/)
+
+## Projects from the Book — Current Status (August 2026)
+- [Project Updates](https://builtwithclaudebook.com/updates.html) — Where all five projects are now
+- [HomeGadgets.ca](https://homegadgets.ca) — Canadian price comparison, 20K+ SKUs, 125+ retailers, 20 categories, MCP server, AI search, enterprise API
+- [ShopButler.ai](https://shopbutler.ai) — Agentic shopping framework for consumer-driven AI commerce
+- [Credentia.one](https://credentia.one) — Open document standard for job applications (.credentia.json)
+- [ContextQuant.com](https://contextquant.com) — Quantitative NLP research platform, SEC document analysis
+- [BasketBrain.ca](https://basketbrain.ca) — Canadian grocery price comparison (parked)
+
+## Free Resources
+- [Prompt Evaluator Exercise](https://builtwithclaudebook.com/exercises/ex-01.html) — Free interactive tool to score your AI prompts
+- [All Exercises](https://builtwithclaudebook.com/exercises.html) — Four interactive exercises from the book
+
+## Articles by the Author
+- [Lessons on Agentic Commerce: Chapter 2](https://medium.com/@Madriz/lessons-on-agentic-commerce-chapter-2-7ad5b6f0fe7d)
+- [Agentic Commerce Thought Experiments](https://medium.com/@Madriz/agentic-commerce-thought-experiments-1ad593a64f39)
+- [Are Product Reviews Lying to You?](https://medium.com/@Madriz/are-product-reviews-lying-to-you-we-analyzed-2-4-million-reviews-to-find-out-a272dbcd5e96)
+- [The Blind Spot in Every Analyst's Model](https://medium.com/@Madriz/the-blind-spot-in-every-analysts-model-93ece4766b36)
+
+## Optional
+- [Read more articles on Medium](https://medium.com/@Madriz)
+- [Substack](https://substack.com/@madriz)
