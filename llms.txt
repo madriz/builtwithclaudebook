@@ -6,8 +6,8 @@
 - [Rodrigo Madriz](https://builtwithclaudebook.com/) — Toronto-based technology entrepreneur, mechanical engineer, former adjunct faculty at Toronto Metropolitan University
 
 ## The Book
-- [English Edition on Amazon](https://www.amazon.ca/dp/B0GVPXGS5Q?tag=homegadge0956-20) — Built with Claude in 28 Days
-- [Spanish Edition on Amazon](https://www.amazon.ca/dp/B0GX2WTWVD?tag=homegadge0956-20) — 28 Días con Claude
+- [English Edition on Amazon](https://www.amazon.ca/dp/B0GVPXGS5Q) — Built with Claude in 28 Days
+- [Spanish Edition on Amazon](https://www.amazon.ca/dp/B0GX2WTWVD) — 28 Días con Claude
 - [Companion Site (English)](https://builtwithclaudebook.com/)
 - [Companion Site (Spanish)](https://builtwithclaudebook.com/es/)
 

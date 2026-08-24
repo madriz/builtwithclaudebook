@@ -88,9 +88,8 @@
         ];
 
         var domain = 'www.amazon.com';
-        var suffix = '';
 
-        // Check Canada first (affiliate tag only applies here)
+        // Check Canada first
         var isCanada = false;
         for (var i = 0; i < canadianZones.length; i++) {
             if (tz === canadianZones[i]) {
@@ -101,12 +100,10 @@
 
         if (isCanada) {
             domain = 'www.amazon.ca';
-            suffix = '?tag=homegadge0956-20';
         } else if (lang === 'es') {
             // Spanish edition is currently only on amazon.ca — always land on .ca
             // so Spanish readers outside Canada still find the edition.
             domain = 'www.amazon.ca';
-            suffix = '?tag=homegadge0956-20';
         } else {
             // Check US (partial match for America/Indiana/*, America/Kentucky/*, etc.)
             var isUS = false;
@@ -133,7 +130,7 @@
             // Default: amazon.com (already set)
         }
 
-        var url = 'https://' + domain + '/dp/' + ASIN + suffix;
+        var url = 'https://' + domain + '/dp/' + ASIN;
 
         document.getElementById('msg').innerHTML =
             'Redirecting to Amazon... <br><a href="' + url + '">Click here if not redirected</a>';

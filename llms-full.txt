@@ -10,8 +10,8 @@ This is the expanded version of https://builtwithclaudebook.com/llms.txt. Same i
 A mechanical engineer by training rather than a software developer, writing from the position the book is addressed to: the non-technical founder who has ideas that used to require a team. Every project described on this site was built and shipped personally, using Claude as the development partner. The book is a first-person account of that work, not a survey of the field.
 
 ## The Book
-- [English Edition on Amazon](https://www.amazon.ca/dp/B0GVPXGS5Q?tag=homegadge0956-20) — Built with Claude in 28 Days
-- [Spanish Edition on Amazon](https://www.amazon.ca/dp/B0GX2WTWVD?tag=homegadge0956-20) — 28 Días con Claude
+- [English Edition on Amazon](https://www.amazon.ca/dp/B0GVPXGS5Q) — Built with Claude in 28 Days
+- [Spanish Edition on Amazon](https://www.amazon.ca/dp/B0GX2WTWVD) — 28 Días con Claude
 - [Companion Site (English)](https://builtwithclaudebook.com/)
 - [Companion Site (Spanish)](https://builtwithclaudebook.com/es/)
 
